@@ -1,0 +1,69 @@
+---
+title       : Gestion des données grillées
+subtitle    : Mise en place d'un serveur de données scientifiques
+author      : Wilfried Heintz
+date        : October 12, 2015
+job         : UMR 1201 Dynafor, INRA, Toulouse
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      #   
+widgets     : [bootstrap, quiz]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+license     : by-nc-sa
+logo        : Dynafor.jpg
+knit        : slidify::knit2slides
+ext_widgets : {rCharts: [libraries/nvd3]}
+
+--- 
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://docs.gip-ecofor.org/libre/slides/unidataLogo.png">
+## Introduction à TDS (Thredds Data Server)
+<h3><u>Un serveur de données scientifiques</u></h3>
+
+Thredds est un serveur Web permettant de fournir à la fois des métadonnées et un accès à des données scientifiques, au travers d'un large panel de protocoles.
+
+ - `En ligne` : pour un accès facilité pour tous les agents Dynafor
+ - `Normalisé` : pour une interopérabilité garantie
+ - `Dédié` : pour des performances élevées
+ 
+ 
+<b>Avantages</b> : 
+
+ - Possibilité `d'encapsuler des données multidimensionnelles`
+ - Personnalisation totale du serveur
+ - Plus besoin `d'appeler Sylvie toutes les 5 minutes` ...
+ - Plus besoin de `recopier` des données `très volumineuses` sur sa machine
+
+---
+<img style="position: absolute; top: 10px; right: 10px; border: 0;" src="http://docs.gip-ecofor.org/libre/slides/OGC_Logo.jpg">
+##  Fonctionnement de Thredds
+
+<h3>Quelques mots incompréhensibles ...</h3>
+ - Hébergé dans un conteneur de servlet (Tomcat)
+ - Nécessite un système `up to date`
+ - S'appuie sur un ensemble de protocoles standardisés pour :
+    - Servir et `exploiter` des données (généralement HDF ou `NetCDF`)
+    - Diffuser les `métadonnées` (notamment par moissonnage)
+ - Exemples : `Opendap`, WMS, MatLab ...
+ 
+
+---
+##  Exemple du protocole OpenDap
+
+<h3>Open source Project for a Network Data Access Protocol</h3>
+Permet à l'utilisateur d'extraire seulement une partie du jeu de données à partir de :
+ - sa zone géographique,
+ - sa période temporelle,
+ - sa variable choisie,
+ - son format de sortie 
+
+
+---
+## Démonstration en ligne (NOAA)
+
+<iframe src = "http://oceanwatch.pfeg.noaa.gov/thredds/catalog.html"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
+
+---
+## Démonstration en ligne (Dynafor)
+
+<iframe src = "http://147.99.107.5:8080/thredds/"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
+
