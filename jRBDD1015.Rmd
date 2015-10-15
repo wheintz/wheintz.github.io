@@ -19,11 +19,7 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 ## Présentation rapide de Jena Fuseki
 <h3><u>Un SPARQL Endpoint</u></h3>
 
-Thredds est un serveur Web permettant de fournir à la fois des métadonnées et un accès à des données scientifiques, au travers d'un large panel de protocoles.
-
- - `En ligne` : pour un accès facilité pour tous les agents Dynafor
- - `Normalisé` : pour une interopérabilité garantie
- - `Dédié` : pour des performances élevées
+Fuseki est un projet Apache lié à Jena
  
  
 <b>Avantages</b> : 
