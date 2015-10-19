@@ -10,7 +10,7 @@ hitheme     : tomorrow      #
 widgets     : [bootstrap, quiz]            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 license     : by-nc-sa
-logo        : Dynafor.jpg
+logo        : rbdd.png
 knit        : slidify::knit2slides
 ext_widgets : {rCharts: [libraries/nvd3]}
 
@@ -28,7 +28,14 @@ Composé de différentes APIs pour implémenter et servir du RDF :
     - API Ontology : intégrer des modèles `OWL` dans Jena
  - API Store pour `stocker les données`
  - Serveur <b>Fuseki</b> pour représenter du `RDF` et exécuter des `requêtes SPARQL` via `HTTP`
- 
+
+
+--- 
+
+## Présentation de Jena
+
+<img style="position: absolute; top: 130px; middle: 0; border: 0" src="assets/img/jena_arch1.png">
+<img style="position: absolute; top: 430px; middle: 10px; border: 0" src="assets/img/jena_arch2.png">
 
 
 ---
@@ -78,6 +85,16 @@ Composé de différentes APIs pour implémenter et servir du RDF :
 ##  Préparation de la machine
 
   <h3>Installation de Java</h3>
+
+Pour changer la version de java :
+
+    - $ update-alternatives --config java
+
+
+---
+##  Préparation de la machine
+
+  <h3>Installation de Tomcat</h3>
 
 Pour changer la version de java :
 

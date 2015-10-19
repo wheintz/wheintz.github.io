@@ -478,7 +478,7 @@ h2 {
 
 /* line 323, ../scss/default.scss */
 h3 {
-  font-size: 60px;
+  font-size: 30px;
   letter-spacing: -1px;
   line-height: 2;
   font-weight: inherit;
@@ -1273,8 +1273,8 @@ article.smaller q:before, article.smaller q:after {
 
 /* line 884, ../scss/default.scss */
 aside.gdbar {
-  height: 62px;
-  width: 155px;
+  height: 130px;
+  width: 165px;
   position: absolute;
   left: -1px;
   top: 125px;
