@@ -42,6 +42,7 @@ Composé de différentes APIs pour implémenter et servir du RDF :
  
 
 ---
+<img style="position: absolute; top: 10px; right: 10px; border: 0; width:300px;" src="assets/img/ubuntu.png">
 ##  Pré-requis indispensables
 
 <h3>Machine connectée + Java + Tomcat </h3>
@@ -57,20 +58,20 @@ Composé de différentes APIs pour implémenter et servir du RDF :
 
 <h3>Installation de Java</h3>
 
-Vérification préliminaire :
+  Vérification préliminaire :
 
     - $ java -version
 
-Puis :
+  Puis :
 
     - $ su root
     - $ echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" 
-    > /etc/apt/sources.list.d/webupd8team-java.list
+      > /etc/apt/sources.list.d/webupd8team-java.list
     - $ echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" 
-    > /etc/apt/sources.list.d/webupd8team-java.list
+      > /etc/apt/sources.list.d/webupd8team-java.list
     - $ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
     - $ apt-get update
-    - $ apt-get install oracle-java`x`-installer
+    - $ apt-get install oracle-javax-installer
 
 
 
