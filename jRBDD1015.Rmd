@@ -17,7 +17,9 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 --- 
 <img style="position: absolute; top: 10px; right: 10px; border: 1px;" src="assets/img/apache_jena.png">
 ## Présentation de Jena
-<h3><u>Un Framework pour le Web sémantique</u></h3>
+
+  <h3><u>Un Framework pour le Web sémantique</u></h3>
+  <h4><i>Source : http://jena.apache.org</i></h4>
 
 Composé de différentes APIs pour implémenter et servir du RDF :
 
@@ -27,25 +29,25 @@ Composé de différentes APIs pour implémenter et servir du RDF :
  - API Store pour `stocker les données`
  - Serveur <b>Fuseki</b> pour représenter du `RDF` et exécuter des `requêtes SPARQL` via `HTTP`
  
-<i>Source : http://jena.apache.org</i>
+
 
 ---
 <img style="position: absolute; top: 10px; right: 10px; border: 0; width:300px;" src="assets/img/Apache.gif">
 ##  Pourquoi Fuseki ?
 
- - Projet de la `fondation Apache`
-    - Open-source
-    - Communauté importante de développeurs
-    - Expérience reconnue
- - Déploiement dans Tomcat
- - Persistance des données gérées
+   - Projet de la `fondation Apache`
+      - Open-source
+      - Communauté importante de développeurs
+      - Expérience reconnue
+   - Déploiement dans Tomcat
+   - Persistance des données gérées
  
 
 ---
 <img style="position: absolute; top: 10px; right: 10px; border: 0; width:300px;" src="assets/img/ubuntu.png">
 ##  Pré-requis indispensables
 
-<h3>Machine connectée + Java + Tomcat </h3>
+  <h3>Machine connectée + Java + Tomcat</h3>
 
  - Exemple avec un serveur Linux Ubuntu
  - Port 8080 ouvert
@@ -56,14 +58,10 @@ Composé de différentes APIs pour implémenter et servir du RDF :
 ---
 ##  Préparation de la machine
 
-<h3>Installation de Java</h3>
-
-  Vérification préliminaire :
+  <h3>Installation de Java</h3>
+  <h4><i>Source : https://wolfpaulus.com/journal/software/tomcat-jessie </i></h4>
 
     - $ java -version
-
-  Puis :
-
     - $ su root
     - $ echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" 
       > /etc/apt/sources.list.d/webupd8team-java.list
@@ -75,17 +73,22 @@ Composé de différentes APIs pour implémenter et servir du RDF :
 
 
 
-<i>Source : https://wolfpaulus.com/journal/software/tomcat-jessie </i>
-
 
 ---
 ##  Préparation de la machine
 
-<h3>Installation de Java</h3>
+  <h3>Installation de Java</h3>
 
-Pour changer de version de java :
+Pour changer la version de java :
 
-$ update-alternatives --config java
+    - $ update-alternatives --config java
+
+
+
+
+
+---
+##  Démonstration en ligne
 
 <iframe src = "http://147.99.107.5:8080/fuseki/"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
 

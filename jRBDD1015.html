@@ -57,7 +57,8 @@
 
 <h2>Présentation de Jena</h2>
 
-<h3><u>Un Framework pour le Web sémantique</u></h3>
+<p><h3><u>Un Framework pour le Web sémantique</u></h3>
+  <h4><i>Source : <a href="http://jena.apache.org">http://jena.apache.org</a></i></h4></p>
 
 <p>Composé de différentes APIs pour implémenter et servir du RDF :</p>
 
@@ -71,8 +72,6 @@
 <li>API Store pour <code>stocker les données</code></li>
 <li>Serveur <b>Fuseki</b> pour représenter du <code>RDF</code> et exécuter des <code>requêtes SPARQL</code> via <code>HTTP</code></li>
 </ul>
-
-<p><i>Source : <a href="http://jena.apache.org">http://jena.apache.org</a></i></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -106,7 +105,7 @@
 
 <h2>Pré-requis indispensables</h2>
 
-<h3>Machine connectée + Java + Tomcat </h3>
+<p><h3>Machine connectée + Java + Tomcat</h3></p>
 
 <ul>
 <li>Exemple avec un serveur Linux Ubuntu</li>
@@ -123,16 +122,11 @@
     <h2>Préparation de la machine</h2>
   </hgroup>
   <article data-timings="">
-    <h3>Installation de Java</h3>
-
-<p>Vérification préliminaire :</p>
+    <p><h3>Installation de Java</h3>
+  <h4><i>Source : <a href="https://wolfpaulus.com/journal/software/tomcat-jessie">https://wolfpaulus.com/journal/software/tomcat-jessie</a> </i></h4></p>
 
 <pre><code>- $ java -version
-</code></pre>
-
-<p>Puis :</p>
-
-<pre><code>- $ su root
+- $ su root
 - $ echo &quot;deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main&quot; 
   &gt; /etc/apt/sources.list.d/webupd8team-java.list
 - $ echo &quot;deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main&quot; 
@@ -141,8 +135,6 @@
 - $ apt-get update
 - $ apt-get install oracle-javax-installer
 </code></pre>
-
-<p><i>Source : <a href="https://wolfpaulus.com/journal/software/tomcat-jessie">https://wolfpaulus.com/journal/software/tomcat-jessie</a> </i></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -153,13 +145,23 @@
     <h2>Préparation de la machine</h2>
   </hgroup>
   <article data-timings="">
-    <h3>Installation de Java</h3>
+    <p><h3>Installation de Java</h3></p>
 
-<p>Pour changer de version de java :</p>
+<p>Pour changer la version de java :</p>
 
-<p>$ update-alternatives --config java</p>
+<pre><code>- $ update-alternatives --config java
+</code></pre>
 
-<iframe src = "http://147.99.107.5:8080/fuseki/"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Démonstration en ligne</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src = "http://147.99.107.5:8080/fuseki/"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
 
   </article>
   <!-- Presenter Notes -->
@@ -197,6 +199,12 @@
       <a href="#" target="_self" rel='tooltip' 
         data-slide=5 title='Préparation de la machine'>
          5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Démonstration en ligne'>
+         6
       </a>
     </li>
   </ul>
