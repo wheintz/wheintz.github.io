@@ -1,2 +1,5 @@
 # wheintz.github.io
-Wilfried Heintz pages
+Wilfried Heintz online pages
+
+---
+wilfried.heintz AT toulouse.inra.fr
