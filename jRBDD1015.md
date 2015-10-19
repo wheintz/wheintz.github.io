@@ -1,6 +1,6 @@
 ---
 title       : Mise en place d'un SPARQL EndPoint
-subtitle    : Un cas pratique avec Jena & Fuseki
+subtitle    : Servir du RDF via HTTP avec Jena & Fuseki
 author      : Julien Barde & Wilfried Heintz
 date        : October 21, 2015
 job         : UMR 1201 Dynafor, INRA, Toulouse
@@ -15,51 +15,76 @@ knit        : slidify::knit2slides
 ext_widgets : {rCharts: [libraries/nvd3]}
 
 --- 
-<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://docs.gip-ecofor.org/libre/slides/unidataLogo.png">
-## Présentation rapide de Jena Fuseki
-<h3><u>Un SPARQL Endpoint</u></h3>
+<img style="position: absolute; top: 10px; right: 10px; border: 1px;" src="assets/img/apache_jena.png">
+## Présentation de Jena
+<h3><u>Un Framework pour le Web sémantique</u></h3>
 
-Fuseki est un projet Apache lié à Jena
+Composé de différentes APIs pour implémenter et servir du RDF :
+
+ - API RDF : `noyau du framework`
+    - API Sparql : interroger et mettre à jour du RDF avec SPARQL
+    - API Ontology : intégrer des modèles `OWL` dans Jena
+ - API Store pour `stocker les données`
+ - Serveur <b>Fuseki</b> pour représenter du `RDF` et exécuter des `requêtes SPARQL` via `HTTP`
  
- 
-<b>Avantages</b> : 
-
- - Possibilité `d'encapsuler des données multidimensionnelles`
- - Personnalisation totale du serveur
- - Plus besoin `d'appeler Sylvie toutes les 5 minutes` ...
- - Plus besoin de `recopier` des données `très volumineuses` sur sa machine
+<i>Source : http://jena.apache.org</i>
 
 ---
-<img style="position: absolute; top: 10px; right: 10px; border: 0;" src="http://docs.gip-ecofor.org/libre/slides/OGC_Logo.jpg">
-##  Fonctionnement de Thredds
+<img style="position: absolute; top: 10px; right: 10px; border: 0; width:300px;" src="assets/img/Apache.gif">
+##  Pourquoi Fuseki ?
 
-<h3>Quelques mots incompréhensibles ...</h3>
- - Hébergé dans un conteneur de servlet (Tomcat)
- - Nécessite un système `up to date`
- - S'appuie sur un ensemble de protocoles standardisés pour :
-    - Servir et `exploiter` des données (généralement HDF ou `NetCDF`)
-    - Diffuser les `métadonnées` (notamment par moissonnage)
- - Exemples : `Opendap`, WMS, MatLab ...
+ - Projet de la `fondation Apache`
+    - Open-source
+    - Communauté importante de développeurs
+    - Expérience reconnue
+ - Déploiement dans Tomcat
+ - Persistance des données gérées
  
 
 ---
-##  Exemple du protocole OpenDap
+##  Pré-requis indispensables
 
-<h3>Open source Project for a Network Data Access Protocol</h3>
-Permet à l'utilisateur d'extraire seulement une partie du jeu de données à partir de :
- - sa zone géographique,
- - sa période temporelle,
- - sa variable choisie,
- - son format de sortie 
+<h3>Machine connectée + Java + Tomcat </h3>
+
+ - Exemple avec un serveur Linux Ubuntu
+ - Port 8080 ouvert
+ - Droits d'administration
+
+
+
+---
+##  Préparation de la machine
+
+<h3>Installation de Java</h3>
+
+Vérification préliminaire :
+
+    - $ java -version
+
+Puis :
+
+    - $ su root
+    - $ echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" 
+    > /etc/apt/sources.list.d/webupd8team-java.list
+    - $ echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" 
+    > /etc/apt/sources.list.d/webupd8team-java.list
+    - $ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
+    - $ apt-get update
+    - $ apt-get install oracle-java`x`-installer
+
+
+
+<i>Source : https://wolfpaulus.com/journal/software/tomcat-jessie </i>
 
 
 ---
-## Démonstration en ligne (NOAA)
+##  Préparation de la machine
 
-<iframe src = "http://oceanwatch.pfeg.noaa.gov/thredds/catalog.html"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
+<h3>Installation de Java</h3>
 
----
-## Démonstration en ligne (Dynafor)
+Pour changer de version de java :
 
-<iframe src = "http://147.99.107.5:8080/thredds/"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
+$ update-alternatives --config java
+
+<iframe src = "http://147.99.107.5:8080/fuseki/"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
 

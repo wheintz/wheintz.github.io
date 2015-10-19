@@ -38,7 +38,7 @@
   </aside>
   <hgroup class="auto-fadein">
     <h1>Mise en place d'un SPARQL EndPoint</h1>
-    <h2>Un cas pratique avec Jena &amp; Fuseki</h2>
+    <h2>Servir du RDF via HTTP avec Jena &amp; Fuseki</h2>
     <p>Julien Barde &amp; Wilfried Heintz<br/>UMR 1201 Dynafor, INRA, Toulouse</p>
   </hgroup>
   <article></article>  
@@ -53,22 +53,26 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <article data-timings="">
-    <p><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://docs.gip-ecofor.org/libre/slides/unidataLogo.png"></p>
+    <p><img style="position: absolute; top: 10px; right: 10px; border: 1px;" src="assets/img/apache_jena.png"></p>
 
-<h2>Présentation rapide de Jena Fuseki</h2>
+<h2>Présentation de Jena</h2>
 
-<h3><u>Un SPARQL Endpoint</u></h3>
+<h3><u>Un Framework pour le Web sémantique</u></h3>
 
-<p>Fuseki est un projet Apache lié à Jena</p>
-
-<p><b>Avantages</b> : </p>
+<p>Composé de différentes APIs pour implémenter et servir du RDF :</p>
 
 <ul>
-<li>Possibilité <code>d&#39;encapsuler des données multidimensionnelles</code></li>
-<li>Personnalisation totale du serveur</li>
-<li>Plus besoin <code>d&#39;appeler Sylvie toutes les 5 minutes</code> ...</li>
-<li>Plus besoin de <code>recopier</code> des données <code>très volumineuses</code> sur sa machine</li>
+<li>API RDF : <code>noyau du framework</code>
+
+<ul>
+<li>API Sparql : interroger et mettre à jour du RDF avec SPARQL</li>
+<li>API Ontology : intégrer des modèles <code>OWL</code> dans Jena</li>
+</ul></li>
+<li>API Store pour <code>stocker les données</code></li>
+<li>Serveur <b>Fuseki</b> pour représenter du <code>RDF</code> et exécuter des <code>requêtes SPARQL</code> via <code>HTTP</code></li>
 </ul>
+
+<p><i>Source : <a href="http://jena.apache.org">http://jena.apache.org</a></i></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -76,22 +80,20 @@
 
 <slide class="" id="slide-2" style="background:;">
   <article data-timings="">
-    <p><img style="position: absolute; top: 10px; right: 10px; border: 0;" src="http://docs.gip-ecofor.org/libre/slides/OGC_Logo.jpg"></p>
+    <p><img style="position: absolute; top: 10px; right: 10px; border: 0; width:300px;" src="assets/img/Apache.gif"></p>
 
-<h2>Fonctionnement de Thredds</h2>
-
-<h3>Quelques mots incompréhensibles ...</h3>
+<h2>Pourquoi Fuseki ?</h2>
 
 <ul>
-<li>Hébergé dans un conteneur de servlet (Tomcat)</li>
-<li>Nécessite un système <code>up to date</code></li>
-<li>S&#39;appuie sur un ensemble de protocoles standardisés pour :
+<li>Projet de la <code>fondation Apache</code>
 
 <ul>
-<li>Servir et <code>exploiter</code> des données (généralement HDF ou <code>NetCDF</code>)</li>
-<li>Diffuser les <code>métadonnées</code> (notamment par moissonnage)</li>
+<li>Open-source</li>
+<li>Communauté importante de développeurs</li>
+<li>Expérience reconnue</li>
 </ul></li>
-<li>Exemples : <code>Opendap</code>, WMS, MatLab ...</li>
+<li>Déploiement dans Tomcat</li>
+<li>Persistance des données gérées</li>
 </ul>
 
   </article>
@@ -100,18 +102,15 @@
 
 <slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>Exemple du protocole OpenDap</h2>
+    <h2>Pré-requis indispensables</h2>
   </hgroup>
   <article data-timings="">
-    <h3>Open source Project for a Network Data Access Protocol</h3>
-
-<p>Permet à l&#39;utilisateur d&#39;extraire seulement une partie du jeu de données à partir de :</p>
+    <h3>Machine connectée + Java + Tomcat </h3>
 
 <ul>
-<li>sa zone géographique,</li>
-<li>sa période temporelle,</li>
-<li>sa variable choisie,</li>
-<li>son format de sortie </li>
+<li>Exemple avec un serveur Linux Ubuntu</li>
+<li>Port 8080 ouvert</li>
+<li>Droits d&#39;administration</li>
 </ul>
 
   </article>
@@ -120,10 +119,29 @@
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>Démonstration en ligne (NOAA)</h2>
+    <h2>Préparation de la machine</h2>
   </hgroup>
   <article data-timings="">
-    <iframe src = "http://oceanwatch.pfeg.noaa.gov/thredds/catalog.html"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
+    <h3>Installation de Java</h3>
+
+<p>Vérification préliminaire :</p>
+
+<pre><code>- $ java -version
+</code></pre>
+
+<p>Puis :</p>
+
+<pre><code>- $ su root
+- $ echo &quot;deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main&quot; 
+&gt; /etc/apt/sources.list.d/webupd8team-java.list
+- $ echo &quot;deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main&quot; 
+&gt; /etc/apt/sources.list.d/webupd8team-java.list
+- $ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
+- $ apt-get update
+- $ apt-get install oracle-java`x`-installer
+</code></pre>
+
+<p><i>Source : <a href="https://wolfpaulus.com/journal/software/tomcat-jessie">https://wolfpaulus.com/journal/software/tomcat-jessie</a> </i></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -131,10 +149,16 @@
 
 <slide class="" id="slide-5" style="background:;">
   <hgroup>
-    <h2>Démonstration en ligne (Dynafor)</h2>
+    <h2>Préparation de la machine</h2>
   </hgroup>
   <article data-timings="">
-    <iframe src = "http://147.99.107.5:8080/thredds/"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
+    <h3>Installation de Java</h3>
+
+<p>Pour changer de version de java :</p>
+
+<p>$ update-alternatives --config java</p>
+
+<iframe src = "http://147.99.107.5:8080/fuseki/"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
 
   </article>
   <!-- Presenter Notes -->
@@ -158,19 +182,19 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Exemple du protocole OpenDap'>
+        data-slide=3 title='Pré-requis indispensables'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Démonstration en ligne (NOAA)'>
+        data-slide=4 title='Préparation de la machine'>
          4
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Démonstration en ligne (Dynafor)'>
+        data-slide=5 title='Préparation de la machine'>
          5
       </a>
     </li>

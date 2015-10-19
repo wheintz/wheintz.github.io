@@ -478,7 +478,7 @@ h2 {
 
 /* line 323, ../scss/default.scss */
 h3 {
-  font-size: 30px;
+  font-size: 60px;
   letter-spacing: -1px;
   line-height: 2;
   font-weight: inherit;
@@ -1274,7 +1274,7 @@ article.smaller q:before, article.smaller q:after {
 /* line 884, ../scss/default.scss */
 aside.gdbar {
   height: 62px;
-  width: 215px;
+  width: 155px;
   position: absolute;
   left: -1px;
   top: 125px;
@@ -1342,14 +1342,14 @@ aside.gdbar img {
 }
 /* line 927, ../scss/default.scss */
 .title-slide hgroup h1 {
-  font-size: 65px;
+  font-size: 69px;
   line-height: 1.4;
   letter-spacing: -3px;
   color: #515151;
 }
 /* line 934, ../scss/default.scss */
 .title-slide hgroup h2 {
-  font-size: 34px;
+  font-size: 44px;
   color: #a9a9a9;
   font-weight: inherit;
 }

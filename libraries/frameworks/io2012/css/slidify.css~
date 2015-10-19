@@ -360,9 +360,12 @@ pre code {
  font-family: 'Oswald', 'Helvetica', sanserif; 
 }
 
-.title-slide hgroup > h1, 
-.title-slide hgroup > h2 {
+.title-slide hgroup > h1 {
   color: #cc2904 ;  /* ; #EF5150*/
+}
+
+.title-slide hgroup > h2 {
+  color: #535E43 ;  /* ; #EF5150*/
 }
 
 
