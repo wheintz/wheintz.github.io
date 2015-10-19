@@ -93,14 +93,80 @@ Pour changer la version de java :
 
 ---
 ##  Préparation de la machine
-
+<img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/tomcat.png">
   <h3>Installation de Tomcat</h3>
 
-Pour changer la version de java :
+Création d'un utilisateur <b>Tomcat</b> :
 
-    - $ update-alternatives --config java
+    - $ sudo adduser \
+        --system \
+        --shell /bin/bash \
+        --gecos 'Tomcat Java Servlet and JSP engine' \
+        --group \
+        --disabled-password \
+        --home /home/tomcat \
+        tomcat
 
 
+---
+##  Préparation de la machine
+<img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/tomcat.png">
+  <h3>Installation de Tomcat</h3>
+
+Installation des paquets :
+
+    - $ mkdir -p ~/tmp
+    - $ cd ~/tmp
+    - $ wget http://www.us.apache.org/dist/tomcat/tomcat-8/v8.0.28/bin/apache-tomcat-8.0.28.tar.gz
+    - $ tar xvzf ./apache-tomcat-8.0.28.tar.gz
+    - $ rm ./apache-tomcat-8.0.28.tar.gz
+
+    - $ sudo mkdir -p /usr/share/tomcat8
+    - $ sudo mv ~/tmp/apache-tomcat-8.0.28 /usr/share/tomcat8
+
+---
+##  Préparation de la machine
+<img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/tomcat.png">
+  <h3>Installation de Tomcat</h3>
+
+Paramétrages :
+
+    - $ sudo rm -f /usr/share/tomcat
+    - $ sudo ln -s /usr/share/tomcat8/apache-tomcat-8.0.28 /usr/share/tomcat
+    
+    - $ sudo chown -R tomcat:tomcat /usr/share/tomcat8
+    - $ sudo chmod +x /usr/share/tomcat/bin/*.sh
+
+
+---
+##  Préparation de la machine
+<img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/tomcat.png">
+  <h3>Installation de Tomcat</h3>
+
+Pour changer le port d'écoute :
+
+    - $ sudo nano /usr/share/tomcat8/apache-tomcat-8.0.28/conf/server.xml
+
+    <Connector port="8080" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443" />
+
+
+---
+##  Préparation de la machine
+<img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/tomcat.png">
+  <h3>Installation de Tomcat</h3>
+
+Pour modifier la taille des fichiers WAR :
+
+    - $ sudo nano /usr/share/tomcat8/apache-tomcat-8.0.28/webapps/manager/WEB-INF/web.xml
+
+    <multipart-config>
+      <!-- 50MB max -->
+      <max-file-size>52428800</max-file-size>
+      <max-request-size>52428800</max-request-size>
+      <file-size-threshold>0</file-size-threshold>
+    </multipart-config>
 
 
 
