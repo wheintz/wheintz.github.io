@@ -229,7 +229,78 @@ Puis télécharger Fuseki :
 
     - $ cd ~/tmp
     - $ wget http://archive.apache.org/dist/jena/binaries/apache-jena-fuseki-2.3.0.tar.gz
+  
+
+---
+##  Installation de Fuseki
+
+  <h3>Préparation</h3>
+
+Créer un répertoire pour Fuseki :
+
+    - $ sudo mkdir /etc/fuseki
+    - $ sudo chown tomcat:tomcat /etc/fuseki
+
+Puis pour le stockage des données :
+
+    - $ sudo mkdir /data/fuseki
+    - $ sudo chown tomcat:tomcat  /data/fuseki
     
+
+
+---
+##  Installation de Fuseki
+
+  <h3>Configuration</h3>
+
+Editer le fichier <b>etc/fuseki/config.ttl</b> :
+
+    # Licensed under the terms of http://www.apache.org/licenses/LICENSE-2.0
+
+    ## Fuseki Server configuration file.
+
+    @prefix :        <#> .
+    @prefix fuseki:  <http://jena.apache.org/fuseki#> .
+    @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix ja:      <http://jena.hpl.hp.com/2005/11/Assembler#> .
+
+    [] rdf:type fuseki:Server ;
+
+
+---
+##  Installation de Fuseki
+
+  <h3>Configuration</h3>
+
+Déclaration d'un service, après la ligne <b># End triples.</b> :
+
+    # Déclaration d'un service
+     fuseki:services (
+      <#nom_du_service>
+     ).
+
+
+
+---
+##  Installation de Fuseki
+
+  <h3>Configuration</h3>
+
+Description du service :
+
+    # Description du service déclaré prédédemment
+     <#nom_du_service> rdf:type fuseki:Service ;
+     fuseki:name                       "nom_du_service" ;       # http://host:port/ds
+     fuseki:serviceQuery               "sparql" ;   # SPARQL query service
+     fuseki:serviceQuery               "query" ;    # SPARQL query service (alt name)
+     fuseki:serviceUpdate              "update" ;   # SPARQL update service
+     fuseki:serviceUpload              "upload" ;   # Non-SPARQL upload service
+     fuseki:serviceReadWriteGraphStore "data" ;     # SPARQL Graph store protocol (read and write)
+    # A separate read-only graph store endpoint:
+     fuseki:serviceReadGraphStore      "get" ;      # SPARQL Graph store protocol (read only)
+     fuseki:dataset                   <#nom_du_dataset> ;
+     .
 
 
 ---
