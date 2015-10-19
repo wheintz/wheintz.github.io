@@ -15,6 +15,31 @@ knit        : slidify::knit2slides
 ext_widgets : {rCharts: [libraries/nvd3]}
 
 --- 
+
+## Introduction
+
+  <h3>Des outils pour servir partager ses données</h3>
+
+Réutilisation des travaux de <b>Julien Barde</b>, UMR IRD Marbec :
+
+ - Diffusion des données d'observation des écosystèmes marins
+ - Dans le cadre du projet `Ecoscope`
+ - Conformément aux standards pour le `Web Sémantique`
+
+
+--- 
+
+## Points abordés
+
+ - Présentation de l'outil Jena
+ - Pré-requis et préparation du serveur
+ - Génération de triplets RDF
+ - Installation de Fuseki
+ - Exemples d'exploitation du Sparql Endpoint
+
+
+
+--- 
 <img style="position: absolute; top: 10px; right: 10px; border: 1px;" src="assets/img/apache_jena.png">
 ## Présentation de Jena
 
@@ -145,7 +170,7 @@ Paramétrages :
 <img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/tomcat.png">
   <h3>Installation de Tomcat</h3>
 
-Changer le port d'écoute :
+Changer le port d'écoute (si nécessaire) :
 
     # sudo nano /usr/share/tomcat8/apache-tomcat-8.0.28/conf/server.xml
 
@@ -211,9 +236,24 @@ Ajouter au début du fichier la ligne :
 
 
 ---
-##  Préparation de la machine
+##  Tomcat est opérationnel
 
 <img style="position: absolute; top: 150px; middle; border: 0; width:600px;" src="assets/img/accueil_tomcat.png">
+
+
+---
+##  Générer du RDF
+<img style="position: absolute; top: 20px; right: 30px; border: 0; width:128px;" src="assets/img/rdf.png">
+  <h3>RDFization / Triplification</h3>
+
+Convertir une liste d'agents stockée dans un tableau CSV en triplets RDF :
+  
+-> https://github.com/juldebar/RDFization_Foaf_Biblio
+
+Plus d'informations : 
+
+-> http://w3c.github.io/csvw/csv2rdf/#generating-rdf
+
 
 
 ---
@@ -246,6 +286,17 @@ Puis pour le stockage des données :
     # sudo mkdir /data/fuseki
     # sudo chown tomcat:tomcat  /data/fuseki
     
+
+---
+##  Installation de Fuseki
+
+  <h3>Copie des données</h3>
+
+Créer un répertoire pour Fuseki :
+
+    # sudo cp ~/tmp/xxx /data/fuseki
+    
+
 
 
 ---
@@ -343,7 +394,7 @@ Description du dataset (mode "mémoire") :
 
 Affichage des datasets dans un serveur en ligne (non localhost)
 
-Editer le fichier <b>etc/fuseki/config.ttl</b> :
+Editer le fichier <b>etc/fuseki/shiro.ini</b> :
 
      [users]
       # Implicitly adds "iniRealm =  org.apache.shiro.realm.text.IniRealm"
@@ -357,9 +408,6 @@ Editer le fichier <b>etc/fuseki/config.ttl</b> :
 ##  Installation de Fuseki
 
   <h3>Sécurité</h3>
-
-
-Affichage des datasets dans un serveur en ligne (non localhost)
 
      [urls]
       ## Control functions open to anyone
