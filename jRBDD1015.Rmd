@@ -42,6 +42,7 @@ Composé de différentes APIs pour implémenter et servir du RDF :
 <img style="position: absolute; top: 10px; right: 10px; border: 0; width:300px;" src="assets/img/Apache.gif">
 ##  Pourquoi Fuseki ?
 
+
    - Projet de la `fondation Apache`
       - Open-source
       - Communauté importante de développeurs
@@ -53,6 +54,7 @@ Composé de différentes APIs pour implémenter et servir du RDF :
 ---
 <img style="position: absolute; top: 10px; right: 10px; border: 0; width:300px;" src="assets/img/ubuntu.png">
 ##  Pré-requis indispensables
+
 
   <h3>Machine connectée + Java + Tomcat</h3>
 
@@ -157,7 +159,7 @@ Changer le port d'écoute :
 <img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/tomcat.png">
   <h3>Installation de Tomcat</h3>
 
-Modifier la taille des fichiers WAR :
+Modifier la taille autorisée pour les fichiers WAR :
 
     - $ sudo nano /usr/share/tomcat8/apache-tomcat-8.0.28/webapps/manager/WEB-INF/web.xml
 
@@ -168,10 +170,69 @@ Modifier la taille des fichiers WAR :
       <file-size-threshold>0</file-size-threshold>
     </multipart-config>
 
+---
+##  Préparation de la machine
+<img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/tomcat.png">
+  <h3>Installation de Tomcat</h3>
+
+Créer un rôle manager :
+
+    - $ sudo nano /usr/share/tomcat8/apache-tomcat-8.0.28/conf/tomcat-users.xml
+
+      <role rolename="tomcat"/>
+      <role rolename="manager-gui"/>
+      <user username="user" password="mdp" roles="tomcat,manager-gui"/>
+
+
+---
+##  Préparation de la machine
+<img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/tomcat.png">
+  <h3>Installation de Tomcat</h3>
+
+Démarrer/arrêter le service :
+
+    - $ sudo /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh
+    - $ sudo /bin/su - tomcat -c /usr/share/tomcat/bin/shutdown.sh
+
+
+---
+##  Préparation de la machine
+<img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/tomcat.png">
+  <h3>Installation de Tomcat</h3>
+
+Optimiser le démarrage :
+
+    - $ nano /usr/share/tomcat8/apache-tomcat-8.0.27/bin/catalina.sh
+
+Ajouter au début du fichier la ligne :
+
+    JAVA_OPTS="-Djava.security.egd=file:/dev/urandom"
+    
+
+
+---
+##  Préparation de la machine
+
+<img style="position: absolute; top: 150px; middle; border: 0; width:600px;" src="assets/img/accueil_tomcat.png">
+
+
+---
+##  Installation de Fuseki
+
+  <h3>Préparation</h3>
+
+Arrêter Tomcat :
+
+    - $ sudo /bin/su - tomcat -c /usr/share/tomcat/bin/shutdown.sh
+
+Puis télécharger Fuseki :
+
+    - $ cd ~/tmp
+    - $ wget http://archive.apache.org/dist/jena/binaries/apache-jena-fuseki-2.3.0.tar.gz
+    
 
 
 ---
 ##  Démonstration en ligne
 
-<iframe src = "http://147.99.107.5:8080/fuseki/"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
-
+<iframe src = "http://147.99.107.5:8080"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>

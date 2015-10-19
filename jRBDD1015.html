@@ -245,7 +245,7 @@
     <p><img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/tomcat.png">
   <h3>Installation de Tomcat</h3></p>
 
-<p>Pour changer le port d&#39;écoute :</p>
+<p>Changer le port d&#39;écoute :</p>
 
 <pre><code>- $ sudo nano /usr/share/tomcat8/apache-tomcat-8.0.28/conf/server.xml
 
@@ -266,7 +266,7 @@
     <p><img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/tomcat.png">
   <h3>Installation de Tomcat</h3></p>
 
-<p>Pour modifier la taille des fichiers WAR :</p>
+<p>Modifier la taille autorisée pour les fichiers WAR :</p>
 
 <pre><code>- $ sudo nano /usr/share/tomcat8/apache-tomcat-8.0.28/webapps/manager/WEB-INF/web.xml
 
@@ -284,10 +284,104 @@
 
 <slide class="" id="slide-12" style="background:;">
   <hgroup>
+    <h2>Préparation de la machine</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/tomcat.png">
+  <h3>Installation de Tomcat</h3></p>
+
+<p>Créer un rôle manager :</p>
+
+<pre><code>- $ sudo nano /usr/share/tomcat8/apache-tomcat-8.0.28/conf/tomcat-users.xml
+
+  &lt;role rolename=&quot;tomcat&quot;/&gt;
+  &lt;role rolename=&quot;manager-gui&quot;/&gt;
+  &lt;user username=&quot;user&quot; password=&quot;mdp&quot; roles=&quot;tomcat,manager-gui&quot;/&gt;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Préparation de la machine</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/tomcat.png">
+  <h3>Installation de Tomcat</h3></p>
+
+<p>Démarrer/arrêter le service :</p>
+
+<pre><code>- $ sudo /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh
+- $ sudo /bin/su - tomcat -c /usr/share/tomcat/bin/shutdown.sh
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Préparation de la machine</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/tomcat.png">
+  <h3>Installation de Tomcat</h3></p>
+
+<p>Optimiser le démarrage :</p>
+
+<pre><code>- $ nano /usr/share/tomcat8/apache-tomcat-8.0.27/bin/catalina.sh
+</code></pre>
+
+<p>Ajouter au début du fichier la ligne :</p>
+
+<pre><code>JAVA_OPTS=&quot;-Djava.security.egd=file:/dev/urandom&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Préparation de la machine</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img style="position: absolute; top: 150px; middle; border: 0; width:600px;" src="assets/img/accueil_tomcat.png"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Installation de Fuseki</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><h3>Préparation</h3></p>
+
+<p>Arrêter Tomcat :</p>
+
+<pre><code>- $ sudo /bin/su - tomcat -c /usr/share/tomcat/bin/shutdown.sh
+</code></pre>
+
+<p>Puis télécharger Fuseki :</p>
+
+<pre><code>- $ cd ~/tmp
+- $ wget http://archive.apache.org/dist/jena/binaries/apache-jena-fuseki-2.3.0.tar.gz
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
     <h2>Démonstration en ligne</h2>
   </hgroup>
   <article data-timings="">
-    <iframe src = "http://147.99.107.5:8080/fuseki/"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
+    <iframe src = "http://147.99.107.5:8080"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
 
   </article>
   <!-- Presenter Notes -->
@@ -365,8 +459,38 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=12 title='Démonstration en ligne'>
+        data-slide=12 title='Préparation de la machine'>
          12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Préparation de la machine'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Préparation de la machine'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Préparation de la machine'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Installation de Fuseki'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Démonstration en ligne'>
+         17
       </a>
     </li>
   </ul>
