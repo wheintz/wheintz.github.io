@@ -416,6 +416,7 @@
 @prefix fuseki:  &lt;http://jena.apache.org/fuseki#&gt; .
 @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs:    &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix tdb:     &lt;http://jena.hpl.hp.com/2008/tdb#&gt; .
 @prefix ja:      &lt;http://jena.hpl.hp.com/2005/11/Assembler#&gt; .
 
 [] rdf:type fuseki:Server ;
@@ -472,6 +473,95 @@
 </slide>
 
 <slide class="" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>Installation de Fuseki</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><h3>Configuration</h3></p>
+
+<p>Description du dataset (mode &quot;mémoire&quot;) :</p>
+
+<pre><code># Description du dataset déclaré dans le service ci-dessus
+
+ &lt;#nom_du_dataset&gt;   rdf:type ja:RDFDataset ;
+ rdfs:label &quot;label_du_dataset&quot; ;
+ ja:defaultGraph
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-22" style="background:;">
+  <hgroup>
+    <h2>Installation de Fuseki</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><h3>Configuration</h3></p>
+
+<pre><code>  [ rdfs:label &quot;label_du_graph&quot; ;
+    a ja:MemoryModel ;
+ ja:content [ja:externalContent &lt;file:/data/fuseki/main.owl&gt; ] ;
+ ja:content [ja:externalContent &lt;file:/data/fuseki/resources_def.owl&gt; ] ;
+ ja:content [ja:externalContent &lt;file:/data/fuseki/resources.owl&gt; ] ;
+ ja:content [ja:externalContent &lt;file:/data/fuseki/resources_publications_ecoscope.rdf&gt; ] ;
+ ja:content [ja:externalContent &lt;file:/data/fuseki/geographic_objects.owl&gt; ] ;
+ ja:content [ja:externalContent &lt;file:/data/fuseki/foaf_kb_compliant.rdf&gt; ] ;
+ ja:content [ja:externalContent &lt;file:/data/fuseki/agents.owl&gt; ] ;
+   ] ;
+ .
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-23" style="background:;">
+  <hgroup>
+    <h2>Installation de Fuseki</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><h3>Sécurité</h3></p>
+
+<p>Affichage des datasets dans un serveur en ligne (non localhost)</p>
+
+<p>Editer le fichier <b>etc/fuseki/config.ttl</b> :</p>
+
+<pre><code> [users]
+  # Implicitly adds &quot;iniRealm =  org.apache.shiro.realm.text.IniRealm&quot;
+  admin=pw
+
+ [roles]
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-24" style="background:;">
+  <hgroup>
+    <h2>Installation de Fuseki</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><h3>Sécurité</h3></p>
+
+<p>Affichage des datasets dans un serveur en ligne (non localhost)</p>
+
+<pre><code> [urls]
+  ## Control functions open to anyone
+  /$/status = anon
+  /$/ping   = anon
+
+  ## and the rest are restricted to localhost.
+  ## /$/** = localhost
+  /$/** = authcBasic,user[admin]
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:;">
   <hgroup>
     <h2>Démonstration en ligne</h2>
   </hgroup>
@@ -608,8 +698,32 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=21 title='Démonstration en ligne'>
+        data-slide=21 title='Installation de Fuseki'>
          21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title='Installation de Fuseki'>
+         22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='Installation de Fuseki'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='Installation de Fuseki'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='Démonstration en ligne'>
+         25
       </a>
     </li>
   </ul>

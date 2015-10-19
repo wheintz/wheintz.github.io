@@ -263,6 +263,7 @@ Editer le fichier <b>etc/fuseki/config.ttl</b> :
     @prefix fuseki:  <http://jena.apache.org/fuseki#> .
     @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
     @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix tdb:     <http://jena.hpl.hp.com/2008/tdb#> .
     @prefix ja:      <http://jena.hpl.hp.com/2005/11/Assembler#> .
 
     [] rdf:type fuseki:Server ;
@@ -301,6 +302,73 @@ Description du service :
      fuseki:serviceReadGraphStore      "get" ;      # SPARQL Graph store protocol (read only)
      fuseki:dataset                   <#nom_du_dataset> ;
      .
+
+
+---
+##  Installation de Fuseki
+
+  <h3>Configuration</h3>
+
+Description du dataset (mode "mémoire") :
+
+    # Description du dataset déclaré dans le service ci-dessus
+
+     <#nom_du_dataset>   rdf:type ja:RDFDataset ;
+     rdfs:label "label_du_dataset" ;
+     ja:defaultGraph
+
+---
+##  Installation de Fuseki
+
+  <h3>Configuration</h3>
+
+
+      [ rdfs:label "label_du_graph" ;
+        a ja:MemoryModel ;
+     ja:content [ja:externalContent <file:/data/fuseki/main.owl> ] ;
+     ja:content [ja:externalContent <file:/data/fuseki/resources_def.owl> ] ;
+     ja:content [ja:externalContent <file:/data/fuseki/resources.owl> ] ;
+     ja:content [ja:externalContent <file:/data/fuseki/resources_publications_ecoscope.rdf> ] ;
+     ja:content [ja:externalContent <file:/data/fuseki/geographic_objects.owl> ] ;
+     ja:content [ja:externalContent <file:/data/fuseki/foaf_kb_compliant.rdf> ] ;
+     ja:content [ja:externalContent <file:/data/fuseki/agents.owl> ] ;
+       ] ;
+     .
+
+---
+##  Installation de Fuseki
+
+  <h3>Sécurité</h3>
+
+
+Affichage des datasets dans un serveur en ligne (non localhost)
+
+Editer le fichier <b>etc/fuseki/config.ttl</b> :
+
+     [users]
+      # Implicitly adds "iniRealm =  org.apache.shiro.realm.text.IniRealm"
+      admin=pw
+
+     [roles]
+
+
+
+---
+##  Installation de Fuseki
+
+  <h3>Sécurité</h3>
+
+
+Affichage des datasets dans un serveur en ligne (non localhost)
+
+     [urls]
+      ## Control functions open to anyone
+      /$/status = anon
+      /$/ping   = anon
+
+      ## and the rest are restricted to localhost.
+      ## /$/** = localhost
+      /$/** = authcBasic,user[admin]
 
 
 ---
