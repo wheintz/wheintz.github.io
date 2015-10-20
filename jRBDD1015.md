@@ -3,7 +3,7 @@ title       : Mise en place d'un SPARQL EndPoint
 subtitle    : Servir du RDF via HTTP avec Jena & Fuseki
 author      : Julien Barde & Wilfried Heintz
 date        : October 21, 2015
-job         : UMR 1201 Dynafor, INRA, Toulouse
+job         : jRBDD_2015
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      #   
@@ -19,13 +19,14 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 
 ## Introduction
 
-  <h3>Des outils pour servir et partager ses données</h3>
+  <h3>Des outils <b>génériques</b> pour servir et partager ses données</h3>
 
-Réutilisation des travaux de <b>Julien Barde</b>, UMR IRD Marbec :
+Réutilisation des travaux de Julien Barde, UMR IRD Marbec
 
  - Décrire toutes les ressources d'une unité de Recherche :
  
     - agents, publications, bases de données, images ...
+    
  - S'appuyer sur des standards pour diffuser ce patrimoine
  
     - OGC ? EML ? <b>Open-data </b>!
@@ -456,8 +457,8 @@ http://localhost:8080/fuseki
 <iframe src = "http://147.99.107.5:8080/fuseki"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
 
 ---
-##  Démonstration en ligne
+##  Inspire et RDF
 
-http://localhost:8080/fuseki
+<iframe src = "http://inspire.data.gouv.fr"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
 
-inspire.data.gouv.fr
+
