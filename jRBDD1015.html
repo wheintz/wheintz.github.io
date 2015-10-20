@@ -169,7 +169,7 @@
 <li>Expérience reconnue</li>
 </ul></li>
 <li>Déploiement dans Tomcat</li>
-<li>Persistance des données gérées</li>
+<li>Persistance des données possible</li>
 <li>3e génération du logiciel</li>
 </ul>
 
@@ -624,11 +624,9 @@
 
 <pre><code>  [ rdfs:label &quot;label_du_graph&quot; ;
     a ja:MemoryModel ;
- ja:content [ja:externalContent &lt;file:/data/fuseki/main.owl&gt; ] ;
- ja:content [ja:externalContent &lt;file:/data/fuseki/resources_def.owl&gt; ] ;
- ja:content [ja:externalContent &lt;file:/data/fuseki/resources.owl&gt; ] ;
- ja:content [ja:externalContent &lt;file:/data/fuseki/foaf_kb_compliant.rdf&gt; ] ;
- ja:content [ja:externalContent &lt;file:/data/fuseki/agents.owl&gt; ] ;
+ ja:content [ja:externalContent &lt;file:/data/fuseki/mes_agents.rdf&gt; ] ;
+ ja:content [ja:externalContent &lt;file:/data/fuseki/Biblio_ext.rdf&gt; ] ;
+ ja:content [ja:externalContent &lt;file:/data/fuseki/Agents_ext.rdf&gt; ] ;
    ] ;
  .
 </code></pre>
@@ -687,7 +685,7 @@
   <article data-timings="">
     <p>http://localhost:8080/fuseki</p>
 
-<iframe src = "http://147.99.107.5:8080/fuseki"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
+<iframe src = "http://localhost:8080/fuseki"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
 
   </article>
   <!-- Presenter Notes -->
