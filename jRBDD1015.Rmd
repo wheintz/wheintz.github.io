@@ -14,17 +14,35 @@ logo        : rbdd.png
 knit        : slidify::knit2slides
 ext_widgets : {rCharts: [libraries/nvd3]}
 
+
 --- 
 
 ## Introduction
 
-  <h3>Des outils pour servir partager ses données</h3>
+  <h3>Des outils pour servir et partager ses données</h3>
 
 Réutilisation des travaux de <b>Julien Barde</b>, UMR IRD Marbec :
 
- - Diffusion des données d'observation des écosystèmes marins
- - Dans le cadre du projet `Ecoscope`
- - Conformément aux standards pour le `Web Sémantique`
+ - Décrire toutes les ressources d'une unité de Recherche :
+ 
+    - agents, publications, bases de données, images ...
+ - S'appuyer sur des standards pour diffuser ce patrimoine
+ 
+    - OGC ? EML ? <b>Open-data </b>!
+    
+
+--- 
+
+## Introduction
+
+<iframe src = "http://5stardata.info/en/"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
+
+
+--- 
+
+## Introduction
+
+<iframe src = "http://data.gouv.fr"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
 
 
 --- 
@@ -33,10 +51,9 @@ Réutilisation des travaux de <b>Julien Barde</b>, UMR IRD Marbec :
 
  - Présentation de l'outil Jena
  - Pré-requis et préparation du serveur
- - Génération de triplets RDF
+ - RDFizer les métadonnées ou les données
  - Installation de Fuseki
  - Exemples d'exploitation du Sparql Endpoint
-
 
 
 --- 
@@ -70,10 +87,11 @@ Composé de différentes APIs pour implémenter et servir du RDF :
 
    - Projet de la `fondation Apache`
       - Open-source
-      - Communauté importante de développeurs
+      - Communauté importante de développeurs (HP)
       - Expérience reconnue
    - Déploiement dans Tomcat
    - Persistance des données gérées
+   - 3e génération du logiciel
  
 
 ---
@@ -242,17 +260,31 @@ Ajouter au début du fichier la ligne :
 
 
 ---
+##  Démarrage de Fuseki
+
+  <h3>Déploiement du fichier WAR</h3>
+
+    # cd ~/tmp
+    # tar xvzf apache-tomcat-8.0.28.tar.gz
+    # rm apache-tomcat-8.0.28.tar.gz
+    # sudo cp fuseki.war /usr/share/tomcat8/apache-tomcat-8.0.28/webapps/fuseki.war
+    
+Puis démarrer Tomcat :
+
+    # sudo /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh
+
+
+---
 ##  Générer du RDF
 <img style="position: absolute; top: 20px; right: 30px; border: 0; width:128px;" src="assets/img/rdf.png">
-  <h3>RDFization / Triplification</h3>
+  <h3>RDFization / Triplification (Agents et bibliographies)</h3>
 
-Convertir une liste d'agents stockée dans un tableau CSV en triplets RDF :
+- Convertir une liste d'agents stockée dans un tableau CSV en triplets RDF
+
+- Créer un lien entre ces agents et leur productions scientifiques
   
 -> https://github.com/juldebar/RDFization_Foaf_Biblio
 
-Plus d'informations : 
-
--> http://w3c.github.io/csvw/csv2rdf/#generating-rdf
 
 
 
@@ -379,8 +411,6 @@ Description du dataset (mode "mémoire") :
      ja:content [ja:externalContent <file:/data/fuseki/main.owl> ] ;
      ja:content [ja:externalContent <file:/data/fuseki/resources_def.owl> ] ;
      ja:content [ja:externalContent <file:/data/fuseki/resources.owl> ] ;
-     ja:content [ja:externalContent <file:/data/fuseki/resources_publications_ecoscope.rdf> ] ;
-     ja:content [ja:externalContent <file:/data/fuseki/geographic_objects.owl> ] ;
      ja:content [ja:externalContent <file:/data/fuseki/foaf_kb_compliant.rdf> ] ;
      ja:content [ja:externalContent <file:/data/fuseki/agents.owl> ] ;
        ] ;
@@ -419,22 +449,15 @@ Editer le fichier <b>etc/fuseki/shiro.ini</b> :
       /$/** = authcBasic,user[admin]
 
 ---
-##  Démarrage de Fuseki
+##  Démonstration en ligne
 
-  <h3>Déploiement du fichier WAR</h3>
+http://localhost:8080/fuseki
 
-    # cd ~/tmp
-    # tar xvzf apache-tomcat-8.0.28.tar.gz
-    # rm apache-tomcat-8.0.28.tar.gz
-    # sudo cp fuseki.war /usr/share/tomcat8/apache-tomcat-8.0.28/webapps/fuseki.war
-
-Puis redémarrer Tomcat :
-
-    # sudo /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh
+<iframe src = "http://147.99.107.5:8080/fuseki"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
 
 ---
 ##  Démonstration en ligne
 
 http://localhost:8080/fuseki
 
-<iframe src = "http://147.99.107.5:8080/fuseki"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
+inspire.data.gouv.fr

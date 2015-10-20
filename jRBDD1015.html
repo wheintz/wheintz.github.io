@@ -56,14 +56,21 @@
     <h2>Introduction</h2>
   </hgroup>
   <article data-timings="">
-    <p><h3>Des outils pour servir partager ses données</h3></p>
+    <p><h3>Des outils pour servir et partager ses données</h3></p>
 
 <p>Réutilisation des travaux de <b>Julien Barde</b>, UMR IRD Marbec :</p>
 
 <ul>
-<li>Diffusion des données d&#39;observation des écosystèmes marins</li>
-<li>Dans le cadre du projet <code>Ecoscope</code></li>
-<li>Conformément aux standards pour le <code>Web Sémantique</code></li>
+<li><p>Décrire toutes les ressources d&#39;une unité de Recherche :</p>
+
+<ul>
+<li>agents, publications, bases de données, images ...</li>
+</ul></li>
+<li><p>S&#39;appuyer sur des standards pour diffuser ce patrimoine</p>
+
+<ul>
+<li>OGC ? EML ? <b>Open-data </b>!</li>
+</ul></li>
 </ul>
 
   </article>
@@ -72,13 +79,35 @@
 
 <slide class="" id="slide-2" style="background:;">
   <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src = "http://5stardata.info/en/"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src = "http://data.gouv.fr"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
     <h2>Points abordés</h2>
   </hgroup>
   <article data-timings="">
     <ul>
 <li>Présentation de l&#39;outil Jena</li>
 <li>Pré-requis et préparation du serveur</li>
-<li>Génération de triplets RDF</li>
+<li>RDFizer les métadonnées ou les données</li>
 <li>Installation de Fuseki</li>
 <li>Exemples d&#39;exploitation du Sparql Endpoint</li>
 </ul>
@@ -87,7 +116,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-3" style="background:;">
+<slide class="" id="slide-5" style="background:;">
   <article data-timings="">
     <p><img style="position: absolute; top: 10px; right: 10px; border: 1px;" src="assets/img/apache_jena.png"></p>
 
@@ -113,7 +142,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-4" style="background:;">
+<slide class="" id="slide-6" style="background:;">
   <hgroup>
     <h2>Présentation de Jena</h2>
   </hgroup>
@@ -125,7 +154,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-5" style="background:;">
+<slide class="" id="slide-7" style="background:;">
   <article data-timings="">
     <p><img style="position: absolute; top: 10px; right: 10px; border: 0; width:300px;" src="assets/img/Apache.gif"></p>
 
@@ -136,18 +165,19 @@
 
 <ul>
 <li>Open-source</li>
-<li>Communauté importante de développeurs</li>
+<li>Communauté importante de développeurs (HP)</li>
 <li>Expérience reconnue</li>
 </ul></li>
 <li>Déploiement dans Tomcat</li>
 <li>Persistance des données gérées</li>
+<li>3e génération du logiciel</li>
 </ul>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-6" style="background:;">
+<slide class="" id="slide-8" style="background:;">
   <article data-timings="">
     <p><img style="position: absolute; top: 10px; right: 10px; border: 0; width:300px;" src="assets/img/ubuntu.png"></p>
 
@@ -165,7 +195,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-7" style="background:;">
+<slide class="" id="slide-9" style="background:;">
   <hgroup>
     <h2>Préparation de la machine</h2>
   </hgroup>
@@ -188,7 +218,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-8" style="background:;">
+<slide class="" id="slide-10" style="background:;">
   <hgroup>
     <h2>Préparation de la machine</h2>
   </hgroup>
@@ -204,7 +234,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-9" style="background:;">
+<slide class="" id="slide-11" style="background:;">
   <hgroup>
     <h2>Préparation de la machine</h2>
   </hgroup>
@@ -228,7 +258,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-10" style="background:;">
+<slide class="" id="slide-12" style="background:;">
   <hgroup>
     <h2>Préparation de la machine</h2>
   </hgroup>
@@ -252,7 +282,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-11" style="background:;">
+<slide class="" id="slide-13" style="background:;">
   <hgroup>
     <h2>Préparation de la machine</h2>
   </hgroup>
@@ -273,7 +303,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-12" style="background:;">
+<slide class="" id="slide-14" style="background:;">
   <hgroup>
     <h2>Préparation de la machine</h2>
   </hgroup>
@@ -294,7 +324,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-13" style="background:;">
+<slide class="" id="slide-15" style="background:;">
   <hgroup>
     <h2>Préparation de la machine</h2>
   </hgroup>
@@ -318,7 +348,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-14" style="background:;">
+<slide class="" id="slide-16" style="background:;">
   <hgroup>
     <h2>Préparation de la machine</h2>
   </hgroup>
@@ -339,7 +369,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-15" style="background:;">
+<slide class="" id="slide-17" style="background:;">
   <hgroup>
     <h2>Préparation de la machine</h2>
   </hgroup>
@@ -357,7 +387,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-16" style="background:;">
+<slide class="" id="slide-18" style="background:;">
   <hgroup>
     <h2>Préparation de la machine</h2>
   </hgroup>
@@ -379,7 +409,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-17" style="background:;">
+<slide class="" id="slide-19" style="background:;">
   <hgroup>
     <h2>Tomcat est opérationnel</h2>
   </hgroup>
@@ -390,27 +420,48 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-18" style="background:;">
+<slide class="" id="slide-20" style="background:;">
   <hgroup>
-    <h2>Générer du RDF</h2>
+    <h2>Démarrage de Fuseki</h2>
   </hgroup>
   <article data-timings="">
-    <p><img style="position: absolute; top: 20px; right: 30px; border: 0; width:128px;" src="assets/img/rdf.png">
-  <h3>RDFization / Triplification</h3></p>
+    <p><h3>Déploiement du fichier WAR</h3></p>
 
-<p>Convertir une liste d&#39;agents stockée dans un tableau CSV en triplets RDF :</p>
+<pre><code># cd ~/tmp
+# tar xvzf apache-tomcat-8.0.28.tar.gz
+# rm apache-tomcat-8.0.28.tar.gz
+# sudo cp fuseki.war /usr/share/tomcat8/apache-tomcat-8.0.28/webapps/fuseki.war
+</code></pre>
 
-<p>-&gt; <a href="https://github.com/juldebar/RDFization_Foaf_Biblio">https://github.com/juldebar/RDFization_Foaf_Biblio</a></p>
+<p>Puis démarrer Tomcat :</p>
 
-<p>Plus d&#39;informations : </p>
-
-<p>-&gt; <a href="http://w3c.github.io/csvw/csv2rdf/#generating-rdf">http://w3c.github.io/csvw/csv2rdf/#generating-rdf</a></p>
+<pre><code># sudo /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-19" style="background:;">
+<slide class="" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>Générer du RDF</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img style="position: absolute; top: 20px; right: 30px; border: 0; width:128px;" src="assets/img/rdf.png">
+  <h3>RDFization / Triplification (Agents et bibliographies)</h3></p>
+
+<ul>
+<li><p>Convertir une liste d&#39;agents stockée dans un tableau CSV en triplets RDF</p></li>
+<li><p>Créer un lien entre ces agents et leur productions scientifiques</p></li>
+</ul>
+
+<p>-&gt; <a href="https://github.com/juldebar/RDFization_Foaf_Biblio">https://github.com/juldebar/RDFization_Foaf_Biblio</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-22" style="background:;">
   <hgroup>
     <h2>Installation de Fuseki</h2>
   </hgroup>
@@ -432,7 +483,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-20" style="background:;">
+<slide class="" id="slide-23" style="background:;">
   <hgroup>
     <h2>Installation de Fuseki</h2>
   </hgroup>
@@ -455,7 +506,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-21" style="background:;">
+<slide class="" id="slide-24" style="background:;">
   <hgroup>
     <h2>Installation de Fuseki</h2>
   </hgroup>
@@ -471,7 +522,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-22" style="background:;">
+<slide class="" id="slide-25" style="background:;">
   <hgroup>
     <h2>Installation de Fuseki</h2>
   </hgroup>
@@ -498,7 +549,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-23" style="background:;">
+<slide class="" id="slide-26" style="background:;">
   <hgroup>
     <h2>Installation de Fuseki</h2>
   </hgroup>
@@ -517,7 +568,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-24" style="background:;">
+<slide class="" id="slide-27" style="background:;">
   <hgroup>
     <h2>Installation de Fuseki</h2>
   </hgroup>
@@ -544,7 +595,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-25" style="background:;">
+<slide class="" id="slide-28" style="background:;">
   <hgroup>
     <h2>Installation de Fuseki</h2>
   </hgroup>
@@ -564,7 +615,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-26" style="background:;">
+<slide class="" id="slide-29" style="background:;">
   <hgroup>
     <h2>Installation de Fuseki</h2>
   </hgroup>
@@ -576,8 +627,6 @@
  ja:content [ja:externalContent &lt;file:/data/fuseki/main.owl&gt; ] ;
  ja:content [ja:externalContent &lt;file:/data/fuseki/resources_def.owl&gt; ] ;
  ja:content [ja:externalContent &lt;file:/data/fuseki/resources.owl&gt; ] ;
- ja:content [ja:externalContent &lt;file:/data/fuseki/resources_publications_ecoscope.rdf&gt; ] ;
- ja:content [ja:externalContent &lt;file:/data/fuseki/geographic_objects.owl&gt; ] ;
  ja:content [ja:externalContent &lt;file:/data/fuseki/foaf_kb_compliant.rdf&gt; ] ;
  ja:content [ja:externalContent &lt;file:/data/fuseki/agents.owl&gt; ] ;
    ] ;
@@ -588,7 +637,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-27" style="background:;">
+<slide class="" id="slide-30" style="background:;">
   <hgroup>
     <h2>Installation de Fuseki</h2>
   </hgroup>
@@ -610,7 +659,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-28" style="background:;">
+<slide class="" id="slide-31" style="background:;">
   <hgroup>
     <h2>Installation de Fuseki</h2>
   </hgroup>
@@ -631,29 +680,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-29" style="background:;">
-  <hgroup>
-    <h2>Démarrage de Fuseki</h2>
-  </hgroup>
-  <article data-timings="">
-    <p><h3>Déploiement du fichier WAR</h3></p>
-
-<pre><code># cd ~/tmp
-# tar xvzf apache-tomcat-8.0.28.tar.gz
-# rm apache-tomcat-8.0.28.tar.gz
-# sudo cp fuseki.war /usr/share/tomcat8/apache-tomcat-8.0.28/webapps/fuseki.war
-</code></pre>
-
-<p>Puis redémarrer Tomcat :</p>
-
-<pre><code># sudo /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-30" style="background:;">
+<slide class="" id="slide-32" style="background:;">
   <hgroup>
     <h2>Démonstration en ligne</h2>
   </hgroup>
@@ -661,6 +688,19 @@
     <p>http://localhost:8080/fuseki</p>
 
 <iframe src = "http://147.99.107.5:8080/fuseki"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-33" style="background:;">
+  <hgroup>
+    <h2>Démonstration en ligne</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>http://localhost:8080/fuseki</p>
+
+<p>inspire.data.gouv.fr</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -678,19 +718,19 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Points abordés'>
+        data-slide=2 title='Introduction'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='NA'>
+        data-slide=3 title='Introduction'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Présentation de Jena'>
+        data-slide=4 title='Points abordés'>
          4
       </a>
     </li>
@@ -702,19 +742,19 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='NA'>
+        data-slide=6 title='Présentation de Jena'>
          6
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Préparation de la machine'>
+        data-slide=7 title='NA'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='Préparation de la machine'>
+        data-slide=8 title='NA'>
          8
       </a>
     </li>
@@ -768,31 +808,31 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=17 title='Tomcat est opérationnel'>
+        data-slide=17 title='Préparation de la machine'>
          17
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=18 title='Générer du RDF'>
+        data-slide=18 title='Préparation de la machine'>
          18
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=19 title='Installation de Fuseki'>
+        data-slide=19 title='Tomcat est opérationnel'>
          19
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=20 title='Installation de Fuseki'>
+        data-slide=20 title='Démarrage de Fuseki'>
          20
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=21 title='Installation de Fuseki'>
+        data-slide=21 title='Générer du RDF'>
          21
       </a>
     </li>
@@ -840,14 +880,32 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=29 title='Démarrage de Fuseki'>
+        data-slide=29 title='Installation de Fuseki'>
          29
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=30 title='Démonstration en ligne'>
+        data-slide=30 title='Installation de Fuseki'>
          30
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=31 title='Installation de Fuseki'>
+         31
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=32 title='Démonstration en ligne'>
+         32
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=33 title='Démonstration en ligne'>
+         33
       </a>
     </li>
   </ul>
