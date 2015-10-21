@@ -409,11 +409,9 @@ Description du dataset (mode "mémoire") :
 
       [ rdfs:label "label_du_graph" ;
         a ja:MemoryModel ;
-     ja:content [ja:externalContent <file:/data/fuseki/main.owl> ] ;
-     ja:content [ja:externalContent <file:/data/fuseki/resources_def.owl> ] ;
-     ja:content [ja:externalContent <file:/data/fuseki/resources.owl> ] ;
-     ja:content [ja:externalContent <file:/data/fuseki/foaf_kb_compliant.rdf> ] ;
-     ja:content [ja:externalContent <file:/data/fuseki/agents.owl> ] ;
+     ja:content [ja:externalContent <file:/data/fuseki/Agents_ext.rdf> ] ;
+     ja:content [ja:externalContent <file:/data/fuseki/Biblio_ext.rdf> ] ;
+     ja:content [ja:externalContent <file:/data/fuseki/Mes_agents.rdf> ] ;
        ] ;
      .
 
@@ -454,7 +452,7 @@ Editer le fichier <b>etc/fuseki/shiro.ini</b> :
 
 http://localhost:8080/fuseki
 
-<iframe src = "http://147.99.107.5:8080/fuseki"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
+<iframe src = "http://localhost:8080/fuseki"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
 
 ---
 ##  Inspire et RDF
