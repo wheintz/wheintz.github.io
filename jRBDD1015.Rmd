@@ -91,7 +91,7 @@ Composé de différentes APIs pour implémenter et servir du RDF :
       - Communauté importante de développeurs (HP)
       - Expérience reconnue
    - Déploiement dans Tomcat
-   - Persistance des données possible
+   - Persistance des données
    - 3e génération du logiciel
  
 
@@ -409,9 +409,9 @@ Description du dataset (mode "mémoire") :
 
       [ rdfs:label "label_du_graph" ;
         a ja:MemoryModel ;
-     ja:content [ja:externalContent <file:/data/fuseki/mes_agents.rdf> ] ;
-     ja:content [ja:externalContent <file:/data/fuseki/Biblio_ext.rdf> ] ;
      ja:content [ja:externalContent <file:/data/fuseki/Agents_ext.rdf> ] ;
+     ja:content [ja:externalContent <file:/data/fuseki/Biblio_ext.rdf> ] ;
+     ja:content [ja:externalContent <file:/data/fuseki/Mes_agents.rdf> ] ;
        ] ;
      .
 
