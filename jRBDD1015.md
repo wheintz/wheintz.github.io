@@ -114,15 +114,17 @@ Composé de différentes APIs pour implémenter et servir du RDF :
   <h3>Installation de Java</h3>
   <h4><i>Source : https://wolfpaulus.com/journal/software/tomcat-jessie </i></h4>
 
-    # java -version
-    # su root
-    # echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" 
+Dans un terminal :
+
+      java -version
+      su root
+      echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" 
       > /etc/apt/sources.list.d/webupd8team-java.list
-    # echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" 
+      echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" 
       > /etc/apt/sources.list.d/webupd8team-java.list
-    # apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
-    # apt-get update
-    # apt-get install oracle-javax-installer
+      apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
+      apt-get update
+      apt-get install oracle-javax-installer
 
 
 
@@ -134,7 +136,7 @@ Composé de différentes APIs pour implémenter et servir du RDF :
 
 Pour changer la version de java :
 
-    # update-alternatives --config java
+      update-alternatives --config java
 
 
 ---
@@ -144,7 +146,7 @@ Pour changer la version de java :
 
 Création d'un utilisateur <b>Tomcat</b> :
 
-    # sudo adduser \
+      sudo adduser \
         --system \
         --shell /bin/bash \
         --gecos 'Tomcat Java Servlet and JSP engine' \
@@ -161,14 +163,14 @@ Création d'un utilisateur <b>Tomcat</b> :
 
 Installation des paquets :
 
-    # mkdir -p ~/tmp
-    # cd ~/tmp
-    # wget http://www.us.apache.org/dist/tomcat/tomcat-8/v8.0.28/bin/apache-tomcat-8.0.28.tar.gz
-    # tar xvzf ./apache-tomcat-8.0.28.tar.gz
-    # rm ./apache-tomcat-8.0.28.tar.gz
+      mkdir -p ~/tmp
+      cd ~/tmp
+      wget http://www.us.apache.org/dist/tomcat/tomcat-8/v8.0.28/bin/apache-tomcat-8.0.28.tar.gz
+      tar xvzf ./apache-tomcat-8.0.28.tar.gz
+      rm ./apache-tomcat-8.0.28.tar.gz
 
-    # sudo mkdir -p /usr/share/tomcat8
-    # sudo mv ~/tmp/apache-tomcat-8.0.28 /usr/share/tomcat8
+      sudo mkdir -p /usr/share/tomcat8
+      sudo mv ~/tmp/apache-tomcat-8.0.28 /usr/share/tomcat8
 
 ---
 ##  Préparation de la machine
@@ -177,11 +179,11 @@ Installation des paquets :
 
 Paramétrages :
 
-    # sudo rm -f /usr/share/tomcat
-    # sudo ln -s /usr/share/tomcat8/apache-tomcat-8.0.28 /usr/share/tomcat
+      sudo rm -f /usr/share/tomcat
+      sudo ln -s /usr/share/tomcat8/apache-tomcat-8.0.28 /usr/share/tomcat
     
-    # sudo chown -R tomcat:tomcat /usr/share/tomcat8
-    # sudo chmod +x /usr/share/tomcat/bin/*.sh
+      sudo chown -R tomcat:tomcat /usr/share/tomcat8
+      sudo chmod +x /usr/share/tomcat/bin/*.sh
 
 
 ---
@@ -189,13 +191,15 @@ Paramétrages :
 <img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/tomcat.png">
   <h3>Installation de Tomcat</h3>
 
-Changer le port d'écoute (si nécessaire) :
+Changer le port d'écoute si nécessaire (remplacer par 8180 par exemple) :
 
-    # sudo nano /usr/share/tomcat8/apache-tomcat-8.0.28/conf/server.xml
+      sudo nano /usr/share/tomcat8/apache-tomcat-8.0.28/conf/server.xml
 
     <Connector port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
                redirectPort="8443" />
+
+<b>NOTE</b> : avec nano, Ctrl+X pour fermer le fichier, répondre 'o' pour enregistrer
 
 
 ---
@@ -205,7 +209,7 @@ Changer le port d'écoute (si nécessaire) :
 
 Modifier la taille autorisée pour les fichiers WAR :
 
-    # sudo nano /usr/share/tomcat8/apache-tomcat-8.0.28/webapps/manager/WEB-INF/web.xml
+      sudo nano /usr/share/tomcat8/apache-tomcat-8.0.28/webapps/manager/WEB-INF/web.xml
 
       <multipart-config>
         <!-- 50MB max -->
@@ -221,7 +225,7 @@ Modifier la taille autorisée pour les fichiers WAR :
 
 Créer un rôle manager :
 
-    # sudo nano /usr/share/tomcat8/apache-tomcat-8.0.28/conf/tomcat-users.xml
+      sudo nano /usr/share/tomcat8/apache-tomcat-8.0.28/conf/tomcat-users.xml
 
       <role rolename="tomcat"/>
       <role rolename="manager-gui"/>
@@ -235,8 +239,8 @@ Créer un rôle manager :
 
 Démarrer/arrêter le service :
 
-    # sudo /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh
-    # sudo /bin/su - tomcat -c /usr/share/tomcat/bin/shutdown.sh
+      sudo /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh
+      sudo /bin/su - tomcat -c /usr/share/tomcat/bin/shutdown.sh
 
 
 ---
@@ -246,7 +250,7 @@ Démarrer/arrêter le service :
 
 Optimiser le démarrage :
 
-    # nano /usr/share/tomcat8/apache-tomcat-8.0.28/bin/catalina.sh
+      nano /usr/share/tomcat8/apache-tomcat-8.0.28/bin/catalina.sh
 
 Ajouter au début du fichier la ligne :
 
@@ -258,21 +262,6 @@ Ajouter au début du fichier la ligne :
 ##  Tomcat est opérationnel
 
 <img style="position: absolute; top: 150px; middle; border: 0; width:600px;" src="assets/img/accueil_tomcat.png">
-
-
----
-##  Démarrage de Fuseki
-
-  <h3>Déploiement du fichier WAR</h3>
-
-    # cd ~/tmp
-    # tar xvzf apache-tomcat-8.0.28.tar.gz
-    # rm apache-tomcat-8.0.28.tar.gz
-    # sudo cp fuseki.war /usr/share/tomcat8/apache-tomcat-8.0.28/webapps/fuseki.war
-    
-Puis démarrer Tomcat :
-
-    # sudo /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh
 
 
 ---
@@ -288,7 +277,6 @@ Puis démarrer Tomcat :
 
 
 
-
 ---
 ##  Installation de Fuseki
 
@@ -296,13 +284,25 @@ Puis démarrer Tomcat :
 
 Arrêter Tomcat :
 
-    # sudo /bin/su - tomcat -c /usr/share/tomcat/bin/shutdown.sh
+      sudo /bin/su - tomcat -c /usr/share/tomcat/bin/shutdown.sh
 
 Puis télécharger Fuseki :
 
-    # cd ~/tmp
-    # wget http://archive.apache.org/dist/jena/binaries/apache-jena-fuseki-2.3.0.tar.gz
+      cd ~/tmp
+      wget http://archive.apache.org/dist/jena/binaries/apache-jena-fuseki-2.3.0.tar.gz
   
+
+
+---
+##  Installation de Fuseki
+
+  <h3>Déploiement du fichier WAR</h3>
+
+      cd ~/tmp
+      tar xvzf apache-jena-fuseki-2.3.0.tar.gz
+      rm apache-jena-fuseki-2.3.0.tar.gz
+      sudo cp apache-jena-fuseki-2.3.0/fuseki.war /usr/share/tomcat8/apache-tomcat-8.0.28/webapps/fuseki.war
+    
 
 ---
 ##  Installation de Fuseki
@@ -311,13 +311,13 @@ Puis télécharger Fuseki :
 
 Créer un répertoire pour Fuseki :
 
-    # sudo mkdir /etc/fuseki
-    # sudo chown tomcat:tomcat /etc/fuseki
+      sudo mkdir /etc/fuseki
+      sudo chown tomcat:tomcat /etc/fuseki
 
 Puis pour le stockage des données :
 
-    # sudo mkdir /data/fuseki
-    # sudo chown tomcat:tomcat  /data/fuseki
+      sudo mkdir /data/fuseki
+      sudo chown tomcat:tomcat  /data/fuseki
     
 
 ---
@@ -327,7 +327,7 @@ Puis pour le stockage des données :
 
 Créer un répertoire pour Fuseki :
 
-    # sudo cp ~/tmp/xxx /data/fuseki
+      sudo cp ~/tmp/xxx /data/fuseki
     
 
 
@@ -362,7 +362,7 @@ Déclaration d'un service, après la ligne <b># End triples.</b> :
 
     # Déclaration d'un service
      fuseki:services (
-      <#nom_du_service>
+      <#<b>nom_du_service</b>>
      ).
 
 
@@ -415,6 +415,8 @@ Description du dataset (mode "mémoire") :
        ] ;
      .
 
+http://mdst-macroes.ird.fr/rdf/
+
 ---
 ##  Installation de Fuseki
 
@@ -446,6 +448,10 @@ Editer le fichier <b>etc/fuseki/shiro.ini</b> :
       ## and the rest are restricted to localhost.
       ## /$/** = localhost
       /$/** = authcBasic,user[admin]
+      
+Puis redémarrer Tomcat :
+
+      sudo /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh
 
 ---
 ##  Démonstration en ligne
