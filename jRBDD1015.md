@@ -100,8 +100,6 @@ Composé de différentes APIs pour implémenter et servir du RDF :
 ##  Pré-requis indispensables
 
 
-  <h3>Machine connectée + Java + Tomcat</h3>
-
  - Exemple avec un serveur Linux Ubuntu
  - Port 8080 ouvert (et libre)
  - Droits d'administration
@@ -112,12 +110,14 @@ Composé de différentes APIs pour implémenter et servir du RDF :
 ##  Pré-requis indispensables
 
 
-  <h3>Quelques notions de Shell Linux/h3>
+  <h3>Quelques notions de Shell Linux</h3>
 
  - Edition avec <b>nano</b> :
     - modifications dans le terminal
     - <b>Ctrl + x</b> pour fermer
     - <b>o</b> pour enregistrer les changements
+ - <b>sudo</b> pour exécuter une commande en tant qu'administrateur
+ - <b>su</b> pour ouvrir une session administrateur
  - <b>cd /...</b> pour se déplacer dans les répertoires
  - <b>ls</b> pour lister le contenu d'un répertoire
 
@@ -126,20 +126,20 @@ Composé de différentes APIs pour implémenter et servir du RDF :
 ---
 ##  Préparation de la machine
 
-  <h3>Installation de Java</h3>
+  <h3>Installation de Java (>=8)</h3>
   <h4><i>Source : https://wolfpaulus.com/journal/software/tomcat-jessie </i></h4>
 
 Dans un terminal :
 
       java -version
-      su root
+      <b>su root</b>
       echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" 
-      > /etc/apt/sources.list.d/webupd8team-java.list
+       > /etc/apt/sources.list.d/webupd8team-java.list
       echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" 
-      > /etc/apt/sources.list.d/webupd8team-java.list
+       > /etc/apt/sources.list.d/webupd8team-java.list
       apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
       apt-get update
-      apt-get install oracle-javax-installer
+      apt-get install oracle-java8-installer
 
 
 
@@ -157,11 +157,11 @@ Pour changer la version de java (si nécessaire) :
 ---
 ##  Préparation de la machine
 <img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/tomcat.png">
-  <h3>Installation de Tomcat</h3>
+  <h3>Installation de Tomcat (>=8)</h3>
 
 Création d'un utilisateur <b>Tomcat</b> :
 
-      sudo adduser \
+      adduser \
         --system \
         --shell /bin/bash \
         --gecos 'Tomcat Java Servlet and JSP engine' \
@@ -184,8 +184,8 @@ Installation des paquets :
       tar xvzf ./apache-tomcat-8.0.28.tar.gz
       rm ./apache-tomcat-8.0.28.tar.gz
 
-      sudo mkdir -p /usr/share/tomcat8
-      sudo mv ~/tmp/apache-tomcat-8.0.28 /usr/share/tomcat8
+      mkdir -p /usr/share/tomcat8
+      mv ~/tmp/apache-tomcat-8.0.28 /usr/share/tomcat8
 
 ---
 ##  Préparation de la machine
@@ -194,11 +194,11 @@ Installation des paquets :
 
 Paramétrages :
 
-      sudo rm -f /usr/share/tomcat
-      sudo ln -s /usr/share/tomcat8/apache-tomcat-8.0.28 /usr/share/tomcat
+      rm -f /usr/share/tomcat
+      ln -s /usr/share/tomcat8/apache-tomcat-8.0.28 /usr/share/tomcat
     
-      sudo chown -R tomcat:tomcat /usr/share/tomcat8
-      sudo chmod +x /usr/share/tomcat/bin/*.sh
+      chown -R tomcat:tomcat /usr/share/tomcat8
+      chmod +x /usr/share/tomcat/bin/*.sh
 
 
 ---
@@ -206,9 +206,9 @@ Paramétrages :
 <img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/tomcat.png">
   <h3>Installation de Tomcat</h3>
 
-Changer le port d'écoute si nécessaire (remplacer par 8180 par exemple) :
+Changer le port d'écoute si nécessaire (remplacer 8080 par 8180 par exemple) :
 
-      sudo nano /usr/share/tomcat8/apache-tomcat-8.0.28/conf/server.xml
+      nano /usr/share/tomcat8/apache-tomcat-8.0.28/conf/server.xml
 
     <Connector port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
@@ -222,7 +222,7 @@ Changer le port d'écoute si nécessaire (remplacer par 8180 par exemple) :
 
 Modifier la taille autorisée pour les fichiers WAR :
 
-      sudo nano /usr/share/tomcat8/apache-tomcat-8.0.28/webapps/manager/WEB-INF/web.xml
+      nano /usr/share/tomcat8/apache-tomcat-8.0.28/webapps/manager/WEB-INF/web.xml
 
       <multipart-config>
         <!-- 50MB max -->
@@ -238,7 +238,7 @@ Modifier la taille autorisée pour les fichiers WAR :
 
 Créer un rôle manager :
 
-      sudo nano /usr/share/tomcat8/apache-tomcat-8.0.28/conf/tomcat-users.xml
+      nano /usr/share/tomcat8/apache-tomcat-8.0.28/conf/tomcat-users.xml
 
       <role rolename="tomcat"/>
       <role rolename="manager-gui"/>
@@ -252,8 +252,8 @@ Créer un rôle manager :
 
 Démarrer/arrêter le service :
 
-      sudo /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh
-      sudo /bin/su - tomcat -c /usr/share/tomcat/bin/shutdown.sh
+      /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh
+      /bin/su - tomcat -c /usr/share/tomcat/bin/shutdown.sh
 
 
 ---
@@ -299,7 +299,7 @@ Ajouter au début du fichier la ligne :
 
 Arrêter Tomcat :
 
-      sudo /bin/su - tomcat -c /usr/share/tomcat/bin/shutdown.sh
+      /bin/su - tomcat -c /usr/share/tomcat/bin/shutdown.sh
 
 Puis télécharger Fuseki :
 
@@ -316,7 +316,7 @@ Puis télécharger Fuseki :
       cd ~/tmp
       tar xvzf apache-jena-fuseki-2.3.0.tar.gz
       rm apache-jena-fuseki-2.3.0.tar.gz
-      sudo cp apache-jena-fuseki-2.3.0/fuseki.war /usr/share/tomcat8/apache-tomcat-8.0.28/webapps/fuseki.war
+      cp apache-jena-fuseki-2.3.0/fuseki.war /usr/share/tomcat8/apache-tomcat-8.0.28/webapps/fuseki.war
     
 
 ---
@@ -326,13 +326,13 @@ Puis télécharger Fuseki :
 
 Créer un répertoire pour Fuseki :
 
-      sudo mkdir /etc/fuseki
-      sudo chown tomcat:tomcat /etc/fuseki
+      mkdir /etc/fuseki
+      chown tomcat:tomcat /etc/fuseki
 
 Puis pour le stockage des données :
 
-      sudo mkdir /data/fuseki
-      sudo chown tomcat:tomcat  /data/fuseki
+      mkdir /data/fuseki
+      chown tomcat:tomcat  /data/fuseki
     
 
 ---
@@ -342,11 +342,11 @@ Puis pour le stockage des données :
 
 Déplacer les données RDF dans le répertoire de stockage :
 
-      sudo cp ~/tmp/xxx /data/fuseki
+      cp ~/tmp/xxx /data/fuseki
     
 Puis redémarrer Tomcat pour déployer Fuseki :
 
-      sudo /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh
+      /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh
 
 
 ---
