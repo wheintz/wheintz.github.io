@@ -535,9 +535,14 @@
   <article data-timings="">
     <p><h3>Copie des données</h3></p>
 
-<p>Créer un répertoire pour Fuseki :</p>
+<p>Déplacer les données RDF dans le répertoire de stockage :</p>
 
 <pre><code>  sudo cp ~/tmp/xxx /data/fuseki
+</code></pre>
+
+<p>Puis redémarrer Tomcat pour déployer Fuseki :</p>
+
+<pre><code>  sudo /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh
 </code></pre>
 
   </article>
@@ -696,11 +701,6 @@
   ## and the rest are restricted to localhost.
   ## /$/** = localhost
   /$/** = authcBasic,user[admin]
-</code></pre>
-
-<p>Puis redémarrer Tomcat :</p>
-
-<pre><code>  sudo /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh
 </code></pre>
 
   </article>

@@ -340,11 +340,13 @@ Puis pour le stockage des données :
 
   <h3>Copie des données</h3>
 
-Créer un répertoire pour Fuseki :
+Déplacer les données RDF dans le répertoire de stockage :
 
       sudo cp ~/tmp/xxx /data/fuseki
     
+Puis redémarrer Tomcat pour déployer Fuseki :
 
+      sudo /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh
 
 
 ---
@@ -464,9 +466,7 @@ Editer le fichier <b>etc/fuseki/shiro.ini</b> :
       ## /$/** = localhost
       /$/** = authcBasic,user[admin]
       
-Puis redémarrer Tomcat :
 
-      sudo /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh
 
 ---
 ##  Démonstration en ligne
