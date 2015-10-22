@@ -103,8 +103,23 @@ Composé de différentes APIs pour implémenter et servir du RDF :
   <h3>Machine connectée + Java + Tomcat</h3>
 
  - Exemple avec un serveur Linux Ubuntu
- - Port 8080 ouvert
+ - Port 8080 ouvert (et libre)
  - Droits d'administration
+
+
+---
+<img style="position: absolute; top: 10px; right: 10px; border: 0; width:300px;" src="assets/img/ubuntu.png">
+##  Pré-requis indispensables
+
+
+  <h3>Quelques notions de Shell Linux/h3>
+
+ - Edition avec <b>nano</b> :
+    - modifications dans le terminal
+    - <b>Ctrl + x</b> pour fermer
+    - <b>o</b> pour enregistrer les changements
+ - <b>cd /...</b> pour se déplacer dans les répertoires
+ - <b>ls</b> pour lister le contenu d'un répertoire
 
 
 
@@ -134,7 +149,7 @@ Dans un terminal :
 
   <h3>Installation de Java</h3>
 
-Pour changer la version de java :
+Pour changer la version de java (si nécessaire) :
 
       update-alternatives --config java
 
@@ -198,8 +213,6 @@ Changer le port d'écoute si nécessaire (remplacer par 8180 par exemple) :
     <Connector port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
                redirectPort="8443" />
-
-<b>NOTE</b> : avec nano, Ctrl+X pour fermer le fichier, répondre 'o' pour enregistrer
 
 
 ---
@@ -267,7 +280,9 @@ Ajouter au début du fichier la ligne :
 ---
 ##  Générer du RDF
 <img style="position: absolute; top: 20px; right: 30px; border: 0; width:128px;" src="assets/img/rdf.png">
-  <h3>RDFization / Triplification (Agents et bibliographies)</h3>
+  <h3>RDFization / Triplification (Agents et bibliographie)</h3>
+
+- Transformer sa bibliographie en RDF (avec Zotero)
 
 - Convertir une liste d'agents stockée dans un tableau CSV en triplets RDF
 
@@ -325,11 +340,13 @@ Puis pour le stockage des données :
 
   <h3>Copie des données</h3>
 
-Créer un répertoire pour Fuseki :
+Déplacer les données RDF dans le répertoire de stockage :
 
       sudo cp ~/tmp/xxx /data/fuseki
     
+Puis redémarrer Tomcat pour déployer Fuseki :
 
+      sudo /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh
 
 
 ---
@@ -449,9 +466,7 @@ Editer le fichier <b>etc/fuseki/shiro.ini</b> :
       ## /$/** = localhost
       /$/** = authcBasic,user[admin]
       
-Puis redémarrer Tomcat :
 
-      sudo /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh
 
 ---
 ##  Démonstration en ligne
