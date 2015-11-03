@@ -280,7 +280,7 @@ Démarrer/arrêter le service :
 <img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/tomcat.png">
   <h3>Installation de Tomcat</h3>
 
-Optimiser le démarrage :
+Optimiser le démarrage (facultatif) :
 
       nano /usr/share/tomcat8/apache-tomcat-8.0.28/bin/catalina.sh
 
@@ -367,6 +367,8 @@ Puis redémarrer Tomcat pour déployer Fuseki :
 
       /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh
 
+Stopper Tomcat à nouveau.
+
 
 ---
 ##  Installation de Fuseki
@@ -451,7 +453,6 @@ Description du dataset (mode "mémoire") :
        ] ;
      .
 
-http://mdst-macroes.ird.fr/rdf/
 
 ---
 ##  Installation de Fuseki
