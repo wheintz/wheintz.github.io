@@ -385,8 +385,33 @@
 <p>Créer un rôle manager :</p>
 
 <pre><code>  nano /usr/share/tomcat8/apache-tomcat-8.0.28/conf/tomcat-users.xml
+</code></pre>
 
-  &lt;role rolename=&quot;tomcat&quot;/&gt;
+<p>Décommenter les lignes :</p>
+
+<p>&lt;!--<br>
+      <role rolename="tomcat"/>
+      <role rolename="role1"/>
+      <user username="tomcat" password="tomcat" roles="tomcat"/>
+      <user username="both" password="both" roles="tomcat,role1"/>
+      <user username="role1" password="role1" roles="trole1"/>
+   --&gt;</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>Préparation de la machine</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/tomcat.png">
+  <h3>Installation de Tomcat</h3></p>
+
+<p>Les remplacer par : </p>
+
+<pre><code>  &lt;role rolename=&quot;tomcat&quot;/&gt;
   &lt;role rolename=&quot;manager-gui&quot;/&gt;
   &lt;user username=&quot;user&quot; password=&quot;mdp&quot; roles=&quot;tomcat,manager-gui&quot;/&gt;
 </code></pre>
@@ -395,7 +420,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-18" style="background:;">
+<slide class="" id="slide-19" style="background:;">
   <hgroup>
     <h2>Préparation de la machine</h2>
   </hgroup>
@@ -413,7 +438,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-19" style="background:;">
+<slide class="" id="slide-20" style="background:;">
   <hgroup>
     <h2>Préparation de la machine</h2>
   </hgroup>
@@ -435,7 +460,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-20" style="background:;">
+<slide class="" id="slide-21" style="background:;">
   <hgroup>
     <h2>Tomcat est opérationnel</h2>
   </hgroup>
@@ -446,7 +471,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-21" style="background:;">
+<slide class="" id="slide-22" style="background:;">
   <hgroup>
     <h2>Générer du RDF</h2>
   </hgroup>
@@ -466,7 +491,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-22" style="background:;">
+<slide class="" id="slide-23" style="background:;">
   <hgroup>
     <h2>Installation de Fuseki</h2>
   </hgroup>
@@ -488,7 +513,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-23" style="background:;">
+<slide class="" id="slide-24" style="background:;">
   <hgroup>
     <h2>Installation de Fuseki</h2>
   </hgroup>
@@ -505,7 +530,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-24" style="background:;">
+<slide class="" id="slide-25" style="background:;">
   <hgroup>
     <h2>Installation de Fuseki</h2>
   </hgroup>
@@ -520,15 +545,15 @@
 
 <p>Puis pour le stockage des données :</p>
 
-<pre><code>  mkdir /data/fuseki
-  chown tomcat:tomcat  /data/fuseki
+<pre><code>  mkdir /home/fuseki
+  chown tomcat:tomcat  /home/fuseki
 </code></pre>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-25" style="background:;">
+<slide class="" id="slide-26" style="background:;">
   <hgroup>
     <h2>Installation de Fuseki</h2>
   </hgroup>
@@ -549,7 +574,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-26" style="background:;">
+<slide class="" id="slide-27" style="background:;">
   <hgroup>
     <h2>Installation de Fuseki</h2>
   </hgroup>
@@ -576,7 +601,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-27" style="background:;">
+<slide class="" id="slide-28" style="background:;">
   <hgroup>
     <h2>Installation de Fuseki</h2>
   </hgroup>
@@ -595,7 +620,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-28" style="background:;">
+<slide class="" id="slide-29" style="background:;">
   <hgroup>
     <h2>Installation de Fuseki</h2>
   </hgroup>
@@ -622,7 +647,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-29" style="background:;">
+<slide class="" id="slide-30" style="background:;">
   <hgroup>
     <h2>Installation de Fuseki</h2>
   </hgroup>
@@ -642,7 +667,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-30" style="background:;">
+<slide class="" id="slide-31" style="background:;">
   <hgroup>
     <h2>Installation de Fuseki</h2>
   </hgroup>
@@ -651,9 +676,9 @@
 
 <pre><code>  [ rdfs:label &quot;label_du_graph&quot; ;
     a ja:MemoryModel ;
- ja:content [ja:externalContent &lt;file:/data/fuseki/Agents_ext.rdf&gt; ] ;
- ja:content [ja:externalContent &lt;file:/data/fuseki/Biblio_ext.rdf&gt; ] ;
- ja:content [ja:externalContent &lt;file:/data/fuseki/Mes_agents.rdf&gt; ] ;
+ ja:content [ja:externalContent &lt;file:/home/fuseki/Agents_ext.rdf&gt; ] ;
+ ja:content [ja:externalContent &lt;file:/home/fuseki/Biblio_ext.rdf&gt; ] ;
+ ja:content [ja:externalContent &lt;file:/home/fuseki/Mes_agents.rdf&gt; ] ;
    ] ;
  .
 </code></pre>
@@ -664,7 +689,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-31" style="background:;">
+<slide class="" id="slide-32" style="background:;">
   <hgroup>
     <h2>Installation de Fuseki</h2>
   </hgroup>
@@ -686,7 +711,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-32" style="background:;">
+<slide class="" id="slide-33" style="background:;">
   <hgroup>
     <h2>Installation de Fuseki</h2>
   </hgroup>
@@ -702,19 +727,6 @@
   ## /$/** = localhost
   /$/** = authcBasic,user[admin]
 </code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-33" style="background:;">
-  <hgroup>
-    <h2>Démonstration en ligne</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>http://localhost:8080/fuseki</p>
-
-<iframe src = "http://localhost:8080/fuseki"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
 
   </article>
   <!-- Presenter Notes -->
@@ -851,19 +863,19 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=20 title='Tomcat est opérationnel'>
+        data-slide=20 title='Préparation de la machine'>
          20
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=21 title='Générer du RDF'>
+        data-slide=21 title='Tomcat est opérationnel'>
          21
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=22 title='Installation de Fuseki'>
+        data-slide=22 title='Générer du RDF'>
          22
       </a>
     </li>
@@ -929,7 +941,7 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=33 title='Démonstration en ligne'>
+        data-slide=33 title='Installation de Fuseki'>
          33
       </a>
     </li>

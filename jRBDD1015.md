@@ -240,6 +240,25 @@ Créer un rôle manager :
 
       nano /usr/share/tomcat8/apache-tomcat-8.0.28/conf/tomcat-users.xml
 
+Décommenter les lignes :
+
+   <!--   
+      <role rolename="tomcat"/>
+      <role rolename="role1"/>
+      <user username="tomcat" password="tomcat" roles="tomcat"/>
+      <user username="both" password="both" roles="tomcat,role1"/>
+      <user username="role1" password="role1" roles="trole1"/>
+   -->
+
+
+---
+##  Préparation de la machine
+<img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/tomcat.png">
+  <h3>Installation de Tomcat</h3>
+
+
+Les remplacer par : 
+   
       <role rolename="tomcat"/>
       <role rolename="manager-gui"/>
       <user username="user" password="mdp" roles="tomcat,manager-gui"/>
@@ -331,8 +350,8 @@ Créer un répertoire pour Fuseki :
 
 Puis pour le stockage des données :
 
-      mkdir /data/fuseki
-      chown tomcat:tomcat  /data/fuseki
+      mkdir /home/fuseki
+      chown tomcat:tomcat  /home/fuseki
     
 
 ---
@@ -426,9 +445,9 @@ Description du dataset (mode "mémoire") :
 
       [ rdfs:label "label_du_graph" ;
         a ja:MemoryModel ;
-     ja:content [ja:externalContent <file:/data/fuseki/Agents_ext.rdf> ] ;
-     ja:content [ja:externalContent <file:/data/fuseki/Biblio_ext.rdf> ] ;
-     ja:content [ja:externalContent <file:/data/fuseki/Mes_agents.rdf> ] ;
+     ja:content [ja:externalContent <file:/home/fuseki/Agents_ext.rdf> ] ;
+     ja:content [ja:externalContent <file:/home/fuseki/Biblio_ext.rdf> ] ;
+     ja:content [ja:externalContent <file:/home/fuseki/Mes_agents.rdf> ] ;
        ] ;
      .
 
@@ -466,14 +485,6 @@ Editer le fichier <b>etc/fuseki/shiro.ini</b> :
       ## /$/** = localhost
       /$/** = authcBasic,user[admin]
       
-
-
----
-##  Démonstration en ligne
-
-http://localhost:8080/fuseki
-
-<iframe src = "http://localhost:8080/fuseki"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
 
 ---
 ##  Inspire et RDF
