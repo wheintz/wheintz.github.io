@@ -490,6 +490,6 @@ Editer le fichier <b>etc/fuseki/shiro.ini</b> :
 ---
 ##  Inspire et RDF
 
-<iframe src = "http://inspire.data.gouv.fr"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
+<iframe src="http://inspire.data.gouv.fr"  onload="this.width=window.innerWidth;this.height=window.innerHeight;"></iframe>
 
 
