@@ -1,7 +1,7 @@
 ---
 title       : Mise en place d'un SPARQL EndPoint
 subtitle    : Servir du RDF via HTTP avec Jena & Fuseki
-author      : Julien Barde & Wilfried Heintz
+author      : Wilfried Heintz & Julien Barde
 date        : October 21, 2015
 job         : jRBDD_2015
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
