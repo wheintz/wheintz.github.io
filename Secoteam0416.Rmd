@@ -143,7 +143,8 @@ ext_widgets : {rCharts: [libraries/nvd3]}
  - Accès partagé aux données référentielles (postgis, thredds ...)
  - Pas de chargement local
  
- 
+
+
 --- 
 ## Publication / Diffusion
 
