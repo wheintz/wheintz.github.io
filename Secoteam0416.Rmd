@@ -101,6 +101,7 @@ ext_widgets : {rCharts: [libraries/nvd3]}
   - déport des services sur nano-ordinateurs
   - interfaces personnalisées
 
+<i>Muesli - Flore - DMH</i>
 
 --- 
 ## Intégration
@@ -114,6 +115,8 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 => Point de rencontre Collecte/Gestion/Exploitation
 => Pérennisation des données
 
+<i>Sebiopag - Carabagri - Sebioref</i>
+
 
 --- 
 ## Contrôle qualité
@@ -124,18 +127,20 @@ ext_widgets : {rCharts: [libraries/nvd3]}
  - ETL
  - Outils divers (Google Refine)
  
-=> 
+=> Coupler avec procédure qualité suivi
 
-
+<i>Farmland - Sebiopag</i>
 
 --- 
 ## Structuration / Sauvegarde
 
- <h3>Système d'Information <br/> (Sciences des données IRIT 04/16</h3>
+ <h3>Système d'Information <br/> (Sciences des données IRIT 04/16)</h3>
 
  - Bases de données <u>en ligne</u>
  - Découverte - visualisation - exploitation
  - Hébergement pérenne (Datacenter)
+ 
+http://dynids.toulouse.inra.fr:8180/geonetwork/ 
 
 --- 
 ## Traitement / Enrichissement
@@ -143,14 +148,34 @@ ext_widgets : {rCharts: [libraries/nvd3]}
  - Accès partagé aux données référentielles (postgis, thredds ...)
  - Pas de chargement local
  
+http://dynids.toulouse.inra.fr:8080/geoserver/
 
+<i>CafoPyr</i>
+--- 
+## Publication / Diffusion
+
+ <h3>Valorisation des jeux de données <br/> (Formation OpenUp! 04/16)</h3>
+
+ - Entrepôts de données (GBIF, Europeana ...)
+ - DOI -> identification pérenne et unique des DS
+ - Datapapers -> Formation nationale l'an prochain
+ 
+http://dynids.toulouse.inra.fr:8180/ipt
+
+<i>Fundiv - BDOiseaux</i>
 
 --- 
 ## Publication / Diffusion
 
-DOI
-Datapapers
-entrepôts de données
-publication des traitements
+ <h3>Mais aussi</h3>
+
+ - Publication des traitements (WPS)
 
 => science reproductible
+
+
+--- 
+## IDS
+
+ <h3>Et maintenant ?</h3>
+
