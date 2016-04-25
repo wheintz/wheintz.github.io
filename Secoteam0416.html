@@ -147,6 +147,8 @@
 <li>Formalise des bonnes pratiques (qui devraient être) évidentes</li>
 </ul>
 
+<p><a href="https://intranet.inra.fr/openscience">https://intranet.inra.fr/openscience</a></p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -156,7 +158,10 @@
     <h2>Collecte</h2>
   </hgroup>
   <article data-timings="">
-    <h3>Les systèmes embarqués <br/>(Ateliers carnets électroniques OSU OREME 04/16)</h3>
+    <p><img style="position: absolute; top: 250px; right: 30px; border: 0; width:350px;" src="assets/img/pc_durci.jpg">
+<img style="position: absolute; top: 290px; right: 430px; border: 0; width:250px;" src="assets/img/rpi.jpg"></p>
+
+<h3>Les systèmes embarqués <br/>(Ateliers carnets électroniques OSU OREME 04/16)</h3>
 
 <ul>
 <li><u>Inconvénients</u>
@@ -183,7 +188,7 @@
 <li>économie de temps (saisie)</li>
 <li>contrôle des données</li>
 <li>saisies simultanées</li>
-<li>sécurité des données</li>
+<li>sécurité des données (copie des requêtes)</li>
 </ul></li>
 </ul>
 
@@ -217,7 +222,8 @@
     <h2>Intégration</h2>
   </hgroup>
   <article data-timings="">
-    <p><h3>Métadonnées<br/> (Rochebrune 01/16)</h3></p>
+    <p><img style="position: absolute; top: 50px; right: 50px; border: 0; width:200px;" src="assets/img/inspire.jpg">
+ <h3>Métadonnées<br/> (Rochebrune 01/16)</h3></p>
 
 <ul>
 <li>Généalogie des données (protocole, projet, objectifs scientifiques ...)</li>
@@ -225,7 +231,7 @@
 <li>Normalisées (Inspire, EML, ISO ...)</li>
 </ul>
 
-<p>=&gt; Point de rencontre Collecte/Gestion/Exploitation
+<p>=&gt; Point de rencontre Collecte/Gestion/Exploitation<br/>
 =&gt; Pérennisation des données</p>
 
 <p><i>Sebiopag - Carabagri - Sebioref</i></p>
@@ -280,27 +286,13 @@
   </hgroup>
   <article data-timings="">
     <ul>
-<li>Accès partagé aux données référentielles (postgis, thredds ...)</li>
-<li>Pas de chargement local</li>
+<li>Accès partagé aux données (postgis, thredds ...)</li>
+<li>Pas de chargement local !!</li>
 </ul>
 
 <p><a href="http://dynids.toulouse.inra.fr:8080/geoserver/">http://dynids.toulouse.inra.fr:8080/geoserver/</a></p>
 
-<h2><i>CafoPyr</i></h2>
-
-<h2>Publication / Diffusion</h2>
-
-<p><h3>Valorisation des jeux de données <br/> (Formation OpenUp! 04/16)</h3></p>
-
-<ul>
-<li>Entrepôts de données (GBIF, Europeana ...)</li>
-<li>DOI -&gt; identification pérenne et unique des DS</li>
-<li>Datapapers -&gt; Formation nationale l&#39;an prochain</li>
-</ul>
-
-<p><a href="http://dynids.toulouse.inra.fr:8180/ipt">http://dynids.toulouse.inra.fr:8180/ipt</a></p>
-
-<p><i>Fundiv - BDOiseaux</i></p>
+<p><i>CafoPyr</i></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -311,13 +303,18 @@
     <h2>Publication / Diffusion</h2>
   </hgroup>
   <article data-timings="">
-    <p><h3>Mais aussi</h3></p>
+    <p><h3>Valorisation des jeux de données <br/> (Workshop OpenUp! 04/16)</h3></p>
 
 <ul>
-<li>Publication des traitements (WPS)</li>
+<li>Entrepôts de données (GBIF, Europeana ...)</li>
+<li>DOI + Licence -&gt; identification pérenne et unique des DS</li>
+<li>Datapapers (Formation nationale l&#39;an prochain)</li>
+<li>Réutilisation de données externes</li>
 </ul>
 
-<p>=&gt; science reproductible</p>
+<p><a href="http://dynids.toulouse.inra.fr:8180/ipt">http://dynids.toulouse.inra.fr:8180/ipt</a></p>
+
+<p><i>Fundiv - BDOiseaux</i></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -325,10 +322,36 @@
 
 <slide class="" id="slide-15" style="background:;">
   <hgroup>
+    <h2>Publication / Diffusion</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><h3>Mais aussi</h3></p>
+
+<ul>
+<li>Publication des traitements (WPS)
+R, python, Matlab ...</li>
+</ul>
+
+<p>=&gt; Science reproductible ***</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
     <h2>IDS</h2>
   </hgroup>
   <article data-timings="">
     <p><h3>Et maintenant ?</h3></p>
+
+<ul>
+<li>Recensement des jeux de données</li>
+<li>Portage dans PostgreSQL</li>
+<li><p>Cataloguage</p></li>
+<li><p>Création de l&#39;interface générale</p></li>
+<li><p>Publication des jeux de données</p></li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -424,8 +447,14 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title='IDS'>
+        data-slide=15 title='Publication / Diffusion'>
          15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='IDS'>
+         16
       </a>
     </li>
   </ul>

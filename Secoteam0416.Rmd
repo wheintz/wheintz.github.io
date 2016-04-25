@@ -72,8 +72,14 @@ ext_widgets : {rCharts: [libraries/nvd3]}
  - Formalise des bonnes pratiques (qui devraient être) évidentes
 
 
+https://intranet.inra.fr/openscience
+
+
 --- 
 ## Collecte 
+
+<img style="position: absolute; top: 250px; right: 30px; border: 0; width:350px;" src="assets/img/pc_durci.jpg">
+<img style="position: absolute; top: 290px; right: 430px; border: 0; width:250px;" src="assets/img/rpi.jpg">
 
 
 <h3>Les systèmes embarqués <br/>(Ateliers carnets électroniques OSU OREME 04/16)</h3>
@@ -91,7 +97,7 @@ ext_widgets : {rCharts: [libraries/nvd3]}
   - économie de temps (saisie)
   - contrôle des données
   - saisies simultanées
-  - sécurité des données
+  - sécurité des données (copie des requêtes)
 
 --- 
 ## Collecte 
@@ -105,14 +111,14 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 
 --- 
 ## Intégration
-
+<img style="position: absolute; top: 50px; right: 50px; border: 0; width:200px;" src="assets/img/inspire.jpg">
  <h3>Métadonnées<br/> (Rochebrune 01/16)</h3>
 
  - Généalogie des données (protocole, projet, objectifs scientifiques ...)
  - Eléments d'exploitation de la données (format, résolution ...)
  - Normalisées (Inspire, EML, ISO ...)
  
-=> Point de rencontre Collecte/Gestion/Exploitation
+=> Point de rencontre Collecte/Gestion/Exploitation<br/>
 => Pérennisation des données
 
 <i>Sebiopag - Carabagri - Sebioref</i>
@@ -142,23 +148,27 @@ ext_widgets : {rCharts: [libraries/nvd3]}
  
 http://dynids.toulouse.inra.fr:8180/geonetwork/ 
 
+
 --- 
 ## Traitement / Enrichissement
 
- - Accès partagé aux données référentielles (postgis, thredds ...)
- - Pas de chargement local
+ - Accès partagé aux données (postgis, thredds ...)
+ - Pas de chargement local !!
  
 http://dynids.toulouse.inra.fr:8080/geoserver/
 
 <i>CafoPyr</i>
+
+
 --- 
 ## Publication / Diffusion
 
- <h3>Valorisation des jeux de données <br/> (Formation OpenUp! 04/16)</h3>
+ <h3>Valorisation des jeux de données <br/> (Workshop OpenUp! 04/16)</h3>
 
  - Entrepôts de données (GBIF, Europeana ...)
- - DOI -> identification pérenne et unique des DS
- - Datapapers -> Formation nationale l'an prochain
+ - DOI + Licence -> identification pérenne et unique des DS
+ - Datapapers (Formation nationale l'an prochain)
+ - Réutilisation de données externes
  
 http://dynids.toulouse.inra.fr:8180/ipt
 
@@ -170,8 +180,9 @@ http://dynids.toulouse.inra.fr:8180/ipt
  <h3>Mais aussi</h3>
 
  - Publication des traitements (WPS)
+  R, python, Matlab ...
 
-=> science reproductible
+=> Science reproductible ***
 
 
 --- 
@@ -179,3 +190,10 @@ http://dynids.toulouse.inra.fr:8180/ipt
 
  <h3>Et maintenant ?</h3>
 
+ - Recensement des jeux de données
+ - Portage dans PostgreSQL
+ - Cataloguage
+ 
+ - Création de l'interface générale
+ 
+ - Publication des jeux de données
