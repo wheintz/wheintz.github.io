@@ -1,0 +1,32 @@
+
+*** These modified files were found in JOE when it aborted on Mon Oct  3 22:06:21 2016
+*** JOE was aborted because the terminal closed
+
+*** Fichier '.git/COMMIT_EDITMSG'
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# Explicit paths specified without -i nor -o; assuming --only paths...
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   jRBDD1016.Rmd
+	new file:   jRBDD1016.html
+#	new file:   jRBDD1016.
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   .Rhistory
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.RData
+
+*** Fichier '(Sans nom)'
+Bureau/grange
+Bureau/grange
+Bureau/grange
+.git/COMMIT_EDITMSG
