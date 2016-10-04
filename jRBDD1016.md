@@ -20,7 +20,6 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 <img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/Dynafor.jpg">
 <h3>Relevés de terrain et suivis à long terme</h3>
 
-
  - Nombreux projets scientifiques
  
  - Relevés de terrain (pluri-)annuels
@@ -35,14 +34,15 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 --- 
 
 ## Collecte de données
+<img style="position: absolute; top: 20px; right: 30px; border: 0; width:500px;" src="assets/img/dmh.png">
 
-<h3>Des pratiques diverses</h3>
+<h3>Méthodes et outils divers</h3>
  
- - Tablettes, smartphones, PC durcis ... mais aussi fiches papier
- - Excel, formulaires Web
+ - Excel, formulaires Web ... mais aussi fiches papier
+ - Tablettes, smartphones, PC durcis, crayons
+ 
 
 => Perte possible de données
-
 => Du temps pour l'intégration dans le SI
 
 
@@ -51,7 +51,7 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 ## Les objectifs
 
 
- - Mieux contrôler la qualité des données dès la collecte
+ - Mieux contrôler la **qualité** des données dès la collecte
  
  - "Fluidifier" l'intégration dans le SI
  

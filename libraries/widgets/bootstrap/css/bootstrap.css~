@@ -744,7 +744,7 @@ h6 {
   font-family: inherit;
   font-weight: 300;
   line-height: 20px;
-  color: #080808;
+  color: #cc2904;
   text-rendering: optimizelegibility;
 }
 
@@ -6171,7 +6171,7 @@ h1 {
 
 h2,
 h3 {
-  font-size: 26px;
+  font-size: 36px;
 }
 
 h4 {

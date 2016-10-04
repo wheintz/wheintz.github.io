@@ -478,8 +478,8 @@ h2 {
 
 /* line 323, ../scss/default.scss */
 h3 {
-  font-size: 30px;
-  letter-spacing: -1px;
+  font-size: 50px;
+  letter-spacing: 1px;
   line-height: 2;
   font-weight: inherit;
   color: #797979;
@@ -1329,7 +1329,7 @@ aside.gdbar.bottom {
 }
 /* line 913, ../scss/default.scss */
 aside.gdbar img {
-  width: 120px;
+  width: 140px;
   height: 80px;
   position: absolute;
   right: 0;
