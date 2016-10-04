@@ -83,6 +83,8 @@ ext_widgets : {rCharts: [libraries/nvd3]}
  - Très faible coût : réplicable
  
  - Conteneurisation : déploiement facilité
+ 
+ - Un seul boitier pour plusieurs collecteurs
 
 
 
@@ -99,6 +101,9 @@ ext_widgets : {rCharts: [libraries/nvd3]}
  - Utilisation de formulaires existants : pas de dépaysement !
  
  - OS Linux : fiabilité
+ 
+ - Déport de l'autonomie et de la "complexité" sur le rpi
+
 
 --- 
 
@@ -108,6 +113,7 @@ ext_widgets : {rCharts: [libraries/nvd3]}
  <h3>Les inconvénients</h3>
 
 
+ - Adaptation de l'ergonomie
  
  - Quelques paramétrages ...
  
@@ -118,18 +124,38 @@ ext_widgets : {rCharts: [libraries/nvd3]}
  - Gestion des UUID
 
 
+
 --- 
 
+## Premier bilan
+
+ 
+ - 3 applications installées :
+   - relevés floristiques
+   - suivi de dendro-microhabitats
+   - indice de biodiversité potentielle
+
+ - Satisfaction générale !
+ 
+ - Pas de perte de données 
+
+
+
+--- 
+<img style="position: absolute; top: 20px; right: 30px; border: 0; width:300px;" src="assets/img/rpi.jpg">
 ## Points d'attention
 
  
  - Alimentation : 5V et 700mA minimum
 
 => bien choisir sa batterie !
- 
- - Sauvegarde : duplication des répertoires de PostgreSQL
- 
+
  - Evolution rapide des versions ...
+ 
+ - Sauvegarde : duplication des répertoires 
+ de PostgreSQL sur clé
+ 
+
  
 
  
