@@ -64,13 +64,13 @@
   <article data-timings="">
     <p><img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/Dynafor.jpg"></p>
 
-<h3>Relevés de terrain et suivis à long terme</h3>
+<p><h3>Relevés de terrain et suivis à long terme</h3></p>
 
 <ul>
 <li><p>Nombreux projets scientifiques</p></li>
-<li><p>Relevés de terrain (pluri-)annuels</p></li>
+<li><p>Collectes de données pluri-annuelles</p></li>
 <li><p>Plusieurs terrains d&#39;études</p></li>
-<li><p>Une équipe de plusieurs collecteurs</p></li>
+<li><p>Équipe de plusieurs collecteurs</p></li>
 <li><p>Bases de données (PostgreSQL/PostGIS) intégrées dans une IDS </p></li>
 </ul>
 
@@ -85,16 +85,18 @@
   <article data-timings="">
     <p><img style="position: absolute; top: 20px; right: 30px; border: 0; width:500px;" src="assets/img/dmh.png"></p>
 
-<h3>Méthodes et outils divers</h3>
- 
+<p><h3>Méthodes et outils divers</h3></p>
 
 <ul>
 <li>Excel, formulaires Web ... mais aussi fiches papier</li>
-<li>Tablettes, smartphones, PC durcis, crayons</li>
+<li>Tablettes, smartphones, PC durcis, crayons ...</li>
 </ul>
 
-<p>=&gt; Perte possible de données
-=&gt; Du temps pour l&#39;intégration dans le SI</p>
+<p>=&gt; Perte possible de données</p>
+
+<p>=&gt; Complexité du paramétrage du matériel portable</p>
+
+<p>=&gt; Du <strong>temps</strong> pour l&#39;intégration dans le SI</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -106,9 +108,15 @@
   </hgroup>
   <article data-timings="">
     <ul>
+<li>Proposer un système <strong>simple</strong>, fiable et (vraiment) portable</li>
+</ul>
+
+<p>(&quot;Moi je vais plus vite en écrivant sur ma fiche papier&quot;)</p>
+
+<ul>
 <li><p>Mieux contrôler la <strong>qualité</strong> des données dès la collecte</p></li>
 <li><p>&quot;Fluidifier&quot; l&#39;intégration dans le SI</p></li>
-<li><p class='..'>sans bouleverser les habitudes ;-)</p></li>
+<li><p class='..'>Sans bouleverser les habitudes ;-)</p></li>
 </ul>
 
   </article>
@@ -120,14 +128,15 @@
     <h2>Une (la ?) solution : Nano-ordinateur</h2>
   </hgroup>
   <article data-timings="">
-    <h3>Les avantages</h3>
- 
+    <p><img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/raspi.jpg"></p>
+
+<p><h3>Les avantages</h3></p>
 
 <ul>
-<li><p>Exemple Geo-poppy</p></li>
-<li><p>Très faible coût</p></li>
-<li><p>Portabilité</p></li>
-<li><p>Conteneurisation</p></li>
+<li><p>Retour d&#39;expérience Geo-poppy : Julien a déjà tout fait !</p></li>
+<li><p>Portabilité : léger et peu encombrant</p></li>
+<li><p>Très faible coût : réplicable</p></li>
+<li><p>Conteneurisation : déploiement facilité</p></li>
 </ul>
 
   </article>
@@ -139,13 +148,14 @@
     <h2>Une (la ?) solution : Nano-ordinateur</h2>
   </hgroup>
   <article data-timings="">
-    <h3>Les inconvénients</h3>
- 
+    <p><img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/raspi.jpg"></p>
+
+<p><h3>Les avantages</h3></p>
 
 <ul>
-<li><p>Développements initiaux</p></li>
-<li><p>Très faible coût</p></li>
-<li><p>Portabilité</p></li>
+<li><p>Compatible avec les supports existants : peu de dépenses</p></li>
+<li><p>Utilisation de formulaires existants : pas de dépaysement !</p></li>
+<li><p>OS Linux : fiabilité</p></li>
 </ul>
 
   </article>
@@ -154,13 +164,36 @@
 
 <slide class="" id="slide-6" style="background:;">
   <hgroup>
+    <h2>Une (la ?) solution : Nano-ordinateur</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><h3>Les inconvénients</h3></p>
+
+<ul>
+<li><p>Quelques paramétrages ...</p></li>
+<li><p>Formation à Docker (rentable mais pas pas indispensable)</p></li>
+<li><p>Synchronisation nécessaire </p></li>
+<li><p>Gestion des UUID</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
     <h2>Points d&#39;attention</h2>
   </hgroup>
   <article data-timings="">
     <ul>
-<li><p>Alimentation</p></li>
-<li><p>Sauvegarde</p></li>
-<li><p>Evolution rapide des versions</p></li>
+<li>Alimentation : 5V et 700mA minimum</li>
+</ul>
+
+<p>=&gt; bien choisir sa batterie !</p>
+
+<ul>
+<li><p>Sauvegarde : duplication des répertoires de PostgreSQL</p></li>
+<li><p>Evolution rapide des versions ...</p></li>
 </ul>
 
   </article>
@@ -203,8 +236,14 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='Points d&#39;attention'>
+        data-slide=6 title='Une (la ?) solution : Nano-ordinateur'>
          6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Points d&#39;attention'>
+         7
       </a>
     </li>
   </ul>

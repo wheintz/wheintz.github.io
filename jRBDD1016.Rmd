@@ -18,15 +18,17 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 --- 
 ## Contexte scientifique
 <img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/Dynafor.jpg">
-<h3>Relevés de terrain et suivis à long terme</h3>
+
+ <h3>Relevés de terrain et suivis à long terme</h3>
+
 
  - Nombreux projets scientifiques
  
- - Relevés de terrain (pluri-)annuels
+ - Collectes de données pluri-annuelles
  
  - Plusieurs terrains d'études
  
- - Une équipe de plusieurs collecteurs
+ - Équipe de plusieurs collecteurs
  
  - Bases de données (PostgreSQL/PostGIS) intégrées dans une IDS 
  
@@ -36,57 +38,84 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 ## Collecte de données
 <img style="position: absolute; top: 20px; right: 30px; border: 0; width:500px;" src="assets/img/dmh.png">
 
-<h3>Méthodes et outils divers</h3>
+ <h3>Méthodes et outils divers</h3>
+
  
  - Excel, formulaires Web ... mais aussi fiches papier
- - Tablettes, smartphones, PC durcis, crayons
+ - Tablettes, smartphones, PC durcis, crayons ...
  
 
 => Perte possible de données
-=> Du temps pour l'intégration dans le SI
+
+=> Complexité du paramétrage du matériel portable
+
+=> Du **temps** pour l'intégration dans le SI
 
 
 --- 
 
 ## Les objectifs
 
+ - Proposer un système **simple**, fiable et (vraiment) portable
+ 
+("Moi je vais plus vite en écrivant sur ma fiche papier")
 
  - Mieux contrôler la **qualité** des données dès la collecte
  
  - "Fluidifier" l'intégration dans le SI
  
- - ... sans bouleverser les habitudes ;-)
+ - ... Sans bouleverser les habitudes ;-)
 
+
+--- 
+
+## Une (la ?) solution : Nano-ordinateur
+<img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/raspi.jpg">
+
+ <h3>Les avantages</h3>
+ 
+
+ 
+ - Retour d'expérience Geo-poppy : Julien a déjà tout fait !
+ 
+ - Portabilité : léger et peu encombrant
+ 
+ - Très faible coût : réplicable
+ 
+ - Conteneurisation : déploiement facilité
+
+
+
+--- 
+
+## Une (la ?) solution : Nano-ordinateur
+<img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/raspi.jpg">
+
+ <h3>Les avantages</h3>
+ 
+ 
+ - Compatible avec les supports existants : peu de dépenses
+ 
+ - Utilisation de formulaires existants : pas de dépaysement !
+ 
+ - OS Linux : fiabilité
 
 --- 
 
 ## Une (la ?) solution : Nano-ordinateur
 
 
-<h3>Les avantages</h3>
- 
- - Exemple Geo-poppy
- 
- - Très faible coût
- 
- - Portabilité
- 
- - Conteneurisation
+ <h3>Les inconvénients</h3>
 
 
-
---- 
-
-## Une (la ?) solution : Nano-ordinateur
-
-
-<h3>Les inconvénients</h3>
  
- - Développements initiaux
+ - Quelques paramétrages ...
  
- - Très faible coût
+ - Formation à Docker (rentable mais pas pas indispensable)
  
- - Portabilité
+ - Synchronisation nécessaire 
+ 
+ - Gestion des UUID
 
 
 --- 
@@ -94,11 +123,13 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 ## Points d'attention
 
  
- - Alimentation
+ - Alimentation : 5V et 700mA minimum
+
+=> bien choisir sa batterie !
  
- - Sauvegarde
+ - Sauvegarde : duplication des répertoires de PostgreSQL
  
- - Evolution rapide des versions
+ - Evolution rapide des versions ...
  
 
  
