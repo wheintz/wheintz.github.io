@@ -1,0 +1,103 @@
+---
+title       : "Peut on géolocaliser des arbres dans les forêts de montagne avec un GPS ?"
+subtitle    : Premiers éléments de réponse
+author      : Wilfried Heintz, Laurent Burnel, Jérôme Willm, Jérôme Molina, Laurent Larrieu
+date        : October 11, 2016
+job         : UMR 1201 Dynafor, INRA, Toulouse
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      #   
+widgets     : [bootstrap, quiz]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+license     : by-nc-sa
+logo        : INRA_logo.png
+knit        : slidify::knit2slides
+ext_widgets : {rCharts: [libraries/nvd3]}
+
+
+--- 
+## Contexte
+<img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/Dynafor.jpg">
+<img style="position: absolute; top: 200px; right: 180px; border: 0; width:800px;" src="assets/img/villelongue.jpg">
+<h3>Ecologie des paysages agri-forestiers</h3>
+
+
+
+--- 
+## Contexte
+<img style="position: absolute; top: 150px; right: 50px; border: 0; width:400px;" src="assets/img/taxons.png">
+
+<h3>Ecologie des paysages agri-forestiers</h3>
+
+ - Recherches pluri-disciplinaires :
+  - Différents taxons
+  - Différentes zones d'études
+  - Suivis à long terme
+
+
+--- 
+## Contexte
+<img style="position: absolute; top: 300px; right: 100px; border: 0; width:400px;" src="assets/img/carto.jpg">
+
+<h3>Ecologie des paysages agri-forestiers</h3>
+
+ - Des besoins communs :
+  - Cartographier les territoires
+  - Géolocaliser nos objets d'études
+
+--- 
+## Les dendo-microhabitats de montagne
+<img style="position: absolute; top: 130px; right: 80px; border: 0; width:350px;" src="assets/img/burat.jpg">
+<h3>Un milieu particulier</h3>
+
+ - Fortes pentes
+ - Orientations défavorables
+ - Couvert forestier très dense
+ - Zones rocheuses 
+
+
+--- 
+## Les dendo-microhabitats de montagne
+
+<h3>Des exigences de précision</h3>
+
+ - Re-identifier des arbres plusieurs années après 
+
+=> s'approcher le plus près de l'individu
+ - Le plus rapidement possible
+
+--- 
+## Le système GPS
+<img style="position: absolute; top: 130px; right: 80px; border: 0; width:500px;" src="assets/img/sat.gif">
+<h3>Global Positionning System</h3>
+
+ - Calcul de phase avec satellite
+ - Précision de 5 à 15m
+ - ... Dépendante du matériel
+ - ... Et des conditions environnementales
+
+--- 
+## Objectifs de l'expérience
+<img style="position: absolute; top: 330px; right: 80px; border: 0; width:400px;" src="assets/img/gps.png">
+<h3>Comparer la précision de plusieurs appareils</h3>
+
+ - Un appareil grand public
+ - Un appareil haut de gamme
+ - Un appareil haut de gamme 
+ + corrections temps réel
+ 
+--- 
+## Mode opératoire
+
+<h3>1/ Prise de coordonnées</h3>
+
+ - Un référentiel : télémètre laser
+ - 
+ 
+<h3>2/ Retour à l'arbre</h3>
+
+ - Un référentiel : télémètre laser
+
+
+
+
