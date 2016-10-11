@@ -16,6 +16,20 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 
 
 --- 
+## Présentation
+
+
+- Contexte de l'étude
+- Forêts de montagne
+- Dendro-microhabitats
+- Le système GPS
+- Objectifs de l'expérience
+- Mode opératoire
+- Premiers résultats
+- Conclusions provisoires
+
+
+--- 
 ## Contexte
 <img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/Dynafor.jpg">
 <img style="position: absolute; top: 200px; right: 180px; border: 0; width:800px;" src="assets/img/villelongue.jpg">
@@ -26,6 +40,7 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 --- 
 ## Contexte
 <img style="position: absolute; top: 150px; right: 50px; border: 0; width:400px;" src="assets/img/taxons.png">
+<img style="position: absolute; top: 450px; right: 550px; border: 0; width:400px;" src="assets/img/zone.png">
 
 <h3>Ecologie des paysages agri-forestiers</h3>
 
@@ -88,7 +103,7 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 
 --- 
 ## Mode opératoire
-<img style="position: absolute; top: 10px; right: 10px; border: 0; width:400px;" src="assets/img/retour.png">
+<img style="position: absolute; top: 300px; right: 10px; border: 0; width:400px;" src="assets/img/retour.png">
 <h3>1/ Prise de coordonnées</h3>
 
  - 3 zones à la topographie distincte (30 arbres par zone)
@@ -114,9 +129,9 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 
  - Différences de précision significatives
  - Importance du premier relevé !
- - Bien définir les conditions d'exploitation du GPS
+ - Bien définir les conditions d'exploitation de l'appareil
  - Bien choisir sa saison d'expérimentation
- - D'autres facteurs à tester : éphémérides ...
+ - D'autres facteurs à tester : éphémérides, marque du GPS ...
 
 
 
