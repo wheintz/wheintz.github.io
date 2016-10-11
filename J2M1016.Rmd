@@ -133,5 +133,9 @@ ext_widgets : {rCharts: [libraries/nvd3]}
  - Bien choisir sa saison d'expérimentation
  - D'autres facteurs à tester : éphémérides, marque du GPS ...
 
+--- 
+<img style="position: absolute; top: 200px; right: 250px; border: 0; width:650px;" src="assets/img/bubu.jpg">
+## Merci pour votre attention
+
 
 
