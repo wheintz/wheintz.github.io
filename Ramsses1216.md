@@ -18,12 +18,12 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 --- 
 ## Un serveur dédié
 <img style="position: absolute; top: 0; right: 10px; border: 0; width:450px;" src="assets/img/postgresql.png">
-<h3>Pour des BDD partagées</h3>
+<h3>Pour des BDD partagées et pérennes</h3>
 
  - Machine virtuelle hébergée et <b><u>sauvegardée</u></b> sur le datacenter
  - Logiciel PostgreSQL
  - Accessible à tous : 147.100.166.41
- - ... Moyennant une authentification !
+ - ... Moyennant une authentification.
 
 
 --- 
@@ -99,7 +99,7 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 
 <h3>QGIS</h3>
 
- - Logiciel SIG libre et gratuit
+ - Logiciel SIG libre et gratuit :-D
  - Peut se connecter à une base pour afficher/éditer des données géographiques
   
  - Ergonomie et fonctionnalités améliorées
@@ -112,7 +112,7 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 
 <h3>ArcGIS</h3>
 
- - Logiciel SIG propriétaire et payant ;-)
+ - Logiciel SIG propriétaire et payant :-(
  - Mais très utilisé et dispose d'un SAV !
  - Peut se connecter à une base pour afficher/éditer des données géographiques
   
@@ -126,7 +126,7 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 
 <h3>R</h3>
 
- - Logiciel libre et gratuit ;-)
+ - Logiciel libre et gratuit :-)
  - Peut se connecter à une base pour générer un dataframe
  - via un package (RPostgreSQL)
 
@@ -158,5 +158,12 @@ ext_widgets : {rCharts: [libraries/nvd3]}
  - 4 tables référentielles (arbre,manip,espèce,genre)
  
  - Interface Internet + Pi
+
+
+--- 
+## Focus sur EasyTrems
+
+<img style="position: absolute; top: 130px; right: 60px; border: 0; width:900px;" src="assets/img/mcd_easytrems.png">
+
 
 
