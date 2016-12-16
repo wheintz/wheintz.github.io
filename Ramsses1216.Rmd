@@ -20,7 +20,7 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 <img style="position: absolute; top: 0; right: 10px; border: 0; width:450px;" src="assets/img/postgresql.png">
 <h3>Pour des BDD partagées</h3>
 
- - Machine virtuelle hébergée et sauvegardée sur le datacenter
+ - Machine virtuelle hébergée et <b><u>sauvegardée</u></b> sur le datacenter
  - Logiciel PostgreSQL
  - Accessible à tous : 147.100.166.41
  - ... Moyennant une authentification !
@@ -142,6 +142,8 @@ ext_widgets : {rCharts: [libraries/nvd3]}
  - 4 interfacées
  - 2 diffusées sur Internet
  - 2 éditées "en direct" par des agents Dynafor
+ 
+ <b>=> N'hésitez plus à convertir vos données !</b>
 
 
 --- 
