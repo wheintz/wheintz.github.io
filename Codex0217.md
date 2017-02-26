@@ -1,5 +1,5 @@
 ---
-title       : "Retour d'expérience sur les carnets électroniques"
+title       : "Carnets de terrain électroniques"
 subtitle    : Avantages et inconvénients des bases de données embarquées
 author      : Wilfried Heintz
 date        : February 27, 2017
