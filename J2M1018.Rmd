@@ -1,5 +1,5 @@
 ---
-title       : "Une antenne GPS centimétrique autonome low-cost."
+title       : "Une antenne GPS centimétrique low-cost."
 subtitle    :  "Oui ça existe !"
 author      : Wilfried Heintz, Laurent Burnel, Jérôme Molina, Julien Ancelin
 date        : October 11, 2018
@@ -17,16 +17,15 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 
 --- 
 ## Présentation
+<img style="position: absolute; top: 150px; right: 80px; border: 0; width:500px;" src="assets/img/reachrs.png">
 
-
-- Contexte de l'étude
-- Forêts de montagne
-- Dendro-microhabitats
+- Contexte de Recherche
+- Zones d'études reculées
 - Le système GPS
-- Objectifs de l'expérience
-- Mode opératoire
+- Un GPS centimétrique 
+- Une solution alternative !
 - Premiers résultats
-- Conclusions provisoires
+- Le projet Centipède
 
 
 --- 
@@ -61,25 +60,15 @@ ext_widgets : {rCharts: [libraries/nvd3]}
   - Géolocaliser nos objets d'études
 
 --- 
-## Les forêts de montagne
+## Des zones d'études reculées
 <img style="position: absolute; top: 130px; right: 80px; border: 0; width:350px;" src="assets/img/burat.jpg">
-<h3>Un milieu particulier</h3>
+<h3>Géolocalisation difficile</h3>
 
  - Fortes pentes
  - Orientations défavorables
  - Couvert forestier très dense
  - Zones rocheuses 
 
-
---- 
-## Les dendo-microhabitats
-<img style="position: absolute; top: 190px; right: 10px; border: 0; width:350px;" src="assets/img/arbre_dmh.png">
-<h3>Des exigences de précision</h3>
-
- - Re-identifier des arbres plusieurs années après 
-
-=> s'approcher le plus près de l'individu
- - Le plus rapidement possible
 
 --- 
 ## Le système GPS
@@ -92,7 +81,7 @@ ext_widgets : {rCharts: [libraries/nvd3]}
  - ... Et des conditions environnementales
 
 --- 
-## Objectifs de l'expérience
+## Les solutions actuelles (cf. J2M2016)
 <img style="position: absolute; top: 240px; right: 10px; border: 0; width:400px;" src="assets/img/gps.png">
 <h3>Comparer la précision de plusieurs appareils</h3>
 
