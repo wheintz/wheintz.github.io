@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Carnets de terrain électroniques</title>
+  <title>Une antenne GPS centimétrique autonome low-cost.</title>
   <meta charset="utf-8">
-  <meta name="description" content="Carnets de terrain électroniques">
-  <meta name="author" content="Wilfried Heintz">
+  <meta name="description" content="Une antenne GPS centimétrique autonome low-cost.">
+  <meta name="author" content="Wilfried Heintz, Laurent Burnel, Jérôme Molina, Julien Ancelin">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -43,9 +43,9 @@
     <img src="assets/img/INRA_logo.png">
   </aside>
   <hgroup class="auto-fadein">
-    <h1>Carnets de terrain électroniques</h1>
-    <h2>Avantages et inconvénients des bases de données embarquées</h2>
-    <p>Wilfried Heintz<br/>UMR 1201 Dynafor, INRA, Toulouse - wilfried.heintz@inra.fr</p>
+    <h1>Une antenne GPS centimétrique autonome low-cost.</h1>
+    <h2>Oui ça existe !</h2>
+    <p>Wilfried Heintz, Laurent Burnel, Jérôme Molina, Julien Ancelin<br/>UMR 1201 Dynafor, INRA, Toulouse</p>
   </hgroup>
   <article></article>  
   <footer class = 'license'>
@@ -59,19 +59,18 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Contexte scientifique</h2>
+    <h2>Présentation</h2>
   </hgroup>
   <article data-timings="">
-    <p><img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/Dynafor.jpg"></p>
-
-<p><h3>Relevés de terrain et suivis à long terme</h3></p>
-
-<ul>
-<li><p>Nombreux projets scientifiques</p></li>
-<li><p>Collectes de données pluri-annuelles</p></li>
-<li><p>Plusieurs terrains d&#39;études dans des conditions hétérogènes</p></li>
-<li><p>Équipe de plusieurs collecteurs</p></li>
-<li><p>Bases de données (PostgreSQL/PostGIS) intégrées dans une IDG </p></li>
+    <ul>
+<li>Contexte de l&#39;étude</li>
+<li>Forêts de montagne</li>
+<li>Dendro-microhabitats</li>
+<li>Le système GPS</li>
+<li>Objectifs de l&#39;expérience</li>
+<li>Mode opératoire</li>
+<li>Premiers résultats</li>
+<li>Conclusions provisoires</li>
 </ul>
 
   </article>
@@ -80,23 +79,13 @@
 
 <slide class="" id="slide-2" style="background:;">
   <hgroup>
-    <h2>Collecte de données</h2>
+    <h2>Contexte</h2>
   </hgroup>
   <article data-timings="">
-    <p><img style="position: absolute; top: 20px; right: 30px; border: 0; width:500px;" src="assets/img/dmh.png"></p>
+    <p><img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/Dynafor.jpg">
+<img style="position: absolute; top: 200px; right: 180px; border: 0; width:800px;" src="assets/img/villelongue.jpg"></p>
 
-<p><h3>Méthodes et outils divers</h3></p>
-
-<ul>
-<li>Excel, formulaires Web ... mais aussi fiches papier</li>
-<li>Tablettes, smartphones, PC durcis, crayons ...</li>
-</ul>
-
-<p>=&gt; Perte possible de données</p>
-
-<p>=&gt; Complexité du paramétrage du matériel portable</p>
-
-<p>=&gt; Du <strong>temps</strong> pour l&#39;intégration dans le SI</p>
+<h3>Ecologie des paysages agri-forestiers</h3>
 
   </article>
   <!-- Presenter Notes -->
@@ -104,14 +93,22 @@
 
 <slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>Les objectifs</h2>
+    <h2>Contexte</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li><p>Proposer un système <strong>simple</strong>, fiable et (vraiment) portable</p></li>
-<li><p>Mieux contrôler la <strong>qualité</strong> des données dès la collecte</p></li>
-<li><p>&quot;Fluidifier&quot; l&#39;intégration dans le SI</p></li>
-<li><p class='..'>Sans bouleverser les habitudes ;-)</p></li>
+    <p><img style="position: absolute; top: 150px; right: 50px; border: 0; width:400px;" src="assets/img/taxons.png">
+<img style="position: absolute; top: 450px; right: 550px; border: 0; width:400px;" src="assets/img/zone.png"></p>
+
+<h3>Ecologie des paysages agri-forestiers</h3>
+
+<ul>
+<li>Recherches pluri-disciplinaires :
+
+<ul>
+<li>Différents taxons</li>
+<li>Différentes zones d&#39;études</li>
+<li>Suivis à long terme</li>
+</ul></li>
 </ul>
 
   </article>
@@ -120,19 +117,20 @@
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>Une (la ?) solution : Nano-ordinateur</h2>
+    <h2>Contexte</h2>
   </hgroup>
   <article data-timings="">
-    <p><img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/raspi.jpg"></p>
+    <p><img style="position: absolute; top: 300px; right: 100px; border: 0; width:400px;" src="assets/img/carto.jpg"></p>
 
-<p><h3>Les avantages</h3></p>
+<h3>Ecologie des paysages agri-forestiers</h3>
 
 <ul>
-<li><p>Retour d&#39;expérience Geo-poppy : <a href="mailto:Julien.Ancelin@inra.fr">Julien.Ancelin@inra.fr</a></p></li>
-<li><p>Portabilité : léger et peu encombrant</p></li>
-<li><p>Très faible coût : réplicable</p></li>
-<li><p>Conteneurisation : déploiement facilité</p></li>
-<li><p>Un seul boitier pour plusieurs collecteurs (Wifi)</p></li>
+<li>Des besoins communs :
+
+<ul>
+<li>Cartographier les territoires</li>
+<li>Géolocaliser nos objets d&#39;études</li>
+</ul></li>
 </ul>
 
   </article>
@@ -141,12 +139,19 @@
 
 <slide class="" id="slide-5" style="background:;">
   <hgroup>
-    <h2>Une (la ?) solution : Nano-ordinateur</h2>
+    <h2>Les forêts de montagne</h2>
   </hgroup>
   <article data-timings="">
-    <p><img style="position: absolute; top: 108px; right: 80px; border: 0; width:730px;" src="assets/img/rpi_schema.png"></p>
+    <p><img style="position: absolute; top: 130px; right: 80px; border: 0; width:350px;" src="assets/img/burat.jpg"></p>
 
-<p><h3>Principe</h3></p>
+<h3>Un milieu particulier</h3>
+
+<ul>
+<li>Fortes pentes</li>
+<li>Orientations défavorables</li>
+<li>Couvert forestier très dense</li>
+<li>Zones rocheuses </li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -154,18 +159,21 @@
 
 <slide class="" id="slide-6" style="background:;">
   <hgroup>
-    <h2>Une (la ?) solution : Nano-ordinateur</h2>
+    <h2>Les dendo-microhabitats</h2>
   </hgroup>
   <article data-timings="">
-    <p><img style="position: absolute; top: 20px; right: 30px; border: 0; width:200px;" src="assets/img/raspi.jpg"></p>
+    <p><img style="position: absolute; top: 190px; right: 10px; border: 0; width:350px;" src="assets/img/arbre_dmh.png"></p>
 
-<p><h3>Les avantages</h3></p>
+<h3>Des exigences de précision</h3>
 
 <ul>
-<li><p>Compatible avec les supports existants : peu de dépenses</p></li>
-<li><p>Utilisation de formulaires existants : pas de dépaysement !</p></li>
-<li><p>OS Linux : fiabilité</p></li>
-<li><p>Déport de l&#39;autonomie et de la &quot;complexité&quot; sur le rpi</p></li>
+<li>Re-identifier des arbres plusieurs années après </li>
+</ul>
+
+<p>=&gt; s&#39;approcher le plus près de l&#39;individu</p>
+
+<ul>
+<li>Le plus rapidement possible</li>
 </ul>
 
   </article>
@@ -174,17 +182,18 @@
 
 <slide class="" id="slide-7" style="background:;">
   <hgroup>
-    <h2>Une (la ?) solution : Nano-ordinateur</h2>
+    <h2>Le système GPS</h2>
   </hgroup>
   <article data-timings="">
-    <p><h3>Les inconvénients</h3></p>
+    <p><img style="position: absolute; top: 150px; right: 80px; border: 0; width:500px;" src="assets/img/sat.gif"></p>
+
+<h3>Global Positionning System</h3>
 
 <ul>
-<li><p>Adaptation de l&#39;ergonomie des formulaires</p></li>
-<li><p>Quelques paramétrages ...</p></li>
-<li><p>Formation à Docker (rentable mais pas pas indispensable)</p></li>
-<li><p>Synchronisation nécessaire </p></li>
-<li><p>Gestion des UUID</p></li>
+<li>Calcul de phase avec satellite</li>
+<li>Précision de 5 à 15m</li>
+<li class='..'>Dépendante du matériel</li>
+<li class='..'>Et des conditions environnementales</li>
 </ul>
 
   </article>
@@ -193,19 +202,17 @@
 
 <slide class="" id="slide-8" style="background:;">
   <hgroup>
-    <h2>Premier bilan</h2>
+    <h2>Objectifs de l&#39;expérience</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li><p>3 applications installées :</p>
+    <p><img style="position: absolute; top: 240px; right: 10px; border: 0; width:400px;" src="assets/img/gps.png"></p>
+
+<h3>Comparer la précision de plusieurs appareils</h3>
 
 <ul>
-<li>relevés floristiques</li>
-<li>suivi de dendro-microhabitats</li>
-<li>indice de biodiversité potentielle</li>
-</ul></li>
-<li><p>Satisfaction générale !</p></li>
-<li><p>Pas de perte de données </p></li>
+<li>Grand public</li>
+<li>Haut de gamme</li>
+<li>Haut de gamme + corrections temps réel</li>
 </ul>
 
   </article>
@@ -213,21 +220,26 @@
 </slide>
 
 <slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Mode opératoire</h2>
+  </hgroup>
   <article data-timings="">
-    <p><img style="position: absolute; top: 20px; right: 30px; border: 0; width:300px;" src="assets/img/rpi.jpg"></p>
+    <p><img style="position: absolute; top: 300px; right: 10px; border: 0; width:400px;" src="assets/img/retour.png"></p>
 
-<h2>Points d&#39;attention</h2>
+<h3>1/ Prise de coordonnées</h3>
 
 <ul>
-<li>Alimentation : 5V et 700mA minimum</li>
+<li>3 zones à la topographie distincte (30 arbres par zone)</li>
+<li>Un référentiel : télémètre laser</li>
+<li>Chaque appareil enregistre les coordonnées</li>
 </ul>
 
-<p>=&gt; bien choisir sa batterie !</p>
+<h3>2/ Retour à l'arbre</h3>
 
 <ul>
-<li><p>Evolution rapide des versions ...</p></li>
-<li><p>Sauvegarde : duplication des répertoires 
-de PostgreSQL sur clé</p></li>
+<li>Suivant les coordonnées de références</li>
+<li>En un temps limité</li>
+<li>On évalue la distance à l&#39;arbre</li>
 </ul>
 
   </article>
@@ -235,15 +247,38 @@ de PostgreSQL sur clé</p></li>
 </slide>
 
 <slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Premiers Résultats</h2>
+  </hgroup>
   <article data-timings="">
-    <p><img style="position: absolute; top: 300px; right: 130px; border: 0; width:350px;" src="assets/img/pizero.jpg"></p>
+    <p><img style="position: absolute; top: 140px; right: 10px; border: 0; width:950px;" src="assets/img/res.png"></p>
 
-<h2>Evolutions actuelles</h2>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
 
-<ul>
-<li><p>Load balancing pour les applications gourmandes</p></li>
-<li><p>Projet Pi4x4 pour une tablette durcie open-source</p></li>
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Conclusions provisoires</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Différences de précision significatives</li>
+<li>Importance du premier relevé !</li>
+<li>Bien définir les conditions d&#39;exploitation de l&#39;appareil</li>
+<li>Bien choisir sa saison d&#39;expérimentation</li>
+<li>D&#39;autres facteurs à tester : éphémérides, marque du GPS ...</li>
 </ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <article data-timings="">
+    <p><img style="position: absolute; top: 200px; right: 250px; border: 0; width:650px;" src="assets/img/bubu.jpg"></p>
+
+<h2>Merci pour votre attention</h2>
 
   </article>
   <!-- Presenter Notes -->
@@ -255,62 +290,74 @@ de PostgreSQL sur clé</p></li>
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Contexte scientifique'>
+        data-slide=1 title='Présentation'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Collecte de données'>
+        data-slide=2 title='Contexte'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Les objectifs'>
+        data-slide=3 title='Contexte'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Une (la ?) solution : Nano-ordinateur'>
+        data-slide=4 title='Contexte'>
          4
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Une (la ?) solution : Nano-ordinateur'>
+        data-slide=5 title='Les forêts de montagne'>
          5
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='Une (la ?) solution : Nano-ordinateur'>
+        data-slide=6 title='Les dendo-microhabitats'>
          6
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Une (la ?) solution : Nano-ordinateur'>
+        data-slide=7 title='Le système GPS'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='Premier bilan'>
+        data-slide=8 title='Objectifs de l&#39;expérience'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='NA'>
+        data-slide=9 title='Mode opératoire'>
          9
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=10 title='NA'>
+        data-slide=10 title='Premiers Résultats'>
          10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Conclusions provisoires'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='NA'>
+         12
       </a>
     </li>
   </ul>

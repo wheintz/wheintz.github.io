@@ -1,8 +1,8 @@
 ---
-title       : "Bases de données Dynafor"
-subtitle    : Point sur l'intégration des données
+title       : "L'utilisation des imageries THR pour une meilleure prédiction des services écosystémiques"
+subtitle    : 
 author      : Wilfried Heintz
-date        : December 15, 2016
+date        : June 1, 2017
 job         : UMR 1201 Dynafor, INRA, Toulouse
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
