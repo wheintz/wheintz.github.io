@@ -9,7 +9,7 @@ highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      #   
 widgets     : [bootstrap, quiz]            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
-license     : by-nc-sa
+license     : by
 logo        : INRA_logo.png
 knit        : slidify::knit2slides
 ext_widgets : {rCharts: [libraries/nvd3]}
@@ -99,9 +99,10 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 
 --- 
 ## Une alternative low-cost
+
 <img style="position: absolute; top:20px; right: 40px; border: 0; width:94px;" src="assets/img/rtklib.jpeg">
 <img style="position: absolute; top:220px; right: 10px; border: 0; width:520px;" src="assets/img/Principe_RTK.png">
-<h3>Antennes RTK Emlid</h3>
+<h3>Puce RTK</h3>
  - Basée sur librairie RTKLib
  - Principe Real Time Kinematic (RTK)
  - Calcul de différence sur phase porteuse 
@@ -113,10 +114,29 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 
 <h3>Antenne autonome "maison"</h3>
  - Fabriquée par Julien Ancelin (INRA)
- - Basée sur Reach RTK Emlid
+ - Basée sur puce Reach RTK Emlid
  - Interfacée sur tablette ou smartphone 
- - Remplace la puce GPS native
+ - Envoie signal corrigé par radio
 
+
+--- 
+## Système D ou clé en main
+
+
+<h3>Antenne Reach RS+</h3>
+ - Fabriquée par EMLID
+ - Embarque la puce Reach M+
+ - Prête à utiliser
+
+
+--- 
+## Quelques chiffres
+<img style="position: absolute; top:20px; right: 40px; border: 0; width:394px;" src="assets/img/porte-monnaie.jpg">
+
+<h3>Antenne Reach RS+</h3>
+ - Fabriquée par EMLID
+ - Embarque la puce Reach M+
+ - Prête à utiliser
 
 --- 
 ## Réseau Centipède
