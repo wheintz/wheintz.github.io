@@ -67,7 +67,7 @@
 <ul>
 <li>Contexte de Recherche</li>
 <li>Zones d&#39;études reculées</li>
-<li>Le système GPS</li>
+<li>Rappel : Le système GPS</li>
 <li>Un GPS centimétrique </li>
 <li>Une solution alternative !</li>
 <li>Premiers résultats</li>
@@ -152,6 +152,7 @@
 <li>Orientations défavorables</li>
 <li>Couvert forestier très dense</li>
 <li>Zones rocheuses </li>
+<li>Signal GSM rare ou absent</li>
 </ul>
 
   </article>
@@ -160,15 +161,16 @@
 
 <slide class="" id="slide-6" style="background:;">
   <hgroup>
-    <h2>Le système GPS</h2>
+    <h2>Rappel : Le système GPS</h2>
   </hgroup>
   <article data-timings="">
-    <p><img style="position: absolute; top: 150px; right: 80px; border: 0; width:500px;" src="assets/img/sat.gif"></p>
+    <p><img style="position: absolute; top: 180px; right: 80px; border: 0; width:500px;" src="assets/img/sat.gif"></p>
 
 <h3>Global Positionning System</h3>
 
 <ul>
-<li>Calcul de phase avec satellite</li>
+<li>Calcul de différence de phase avec satellite
+<br/>(1 μs &lt;=&gt; 300m d&#39;écart !)</li>
 <li>Précision de 5 à 15m</li>
 <li class='..'>Dépendante du matériel</li>
 <li class='..'>Et des conditions environnementales</li>
@@ -180,17 +182,25 @@
 
 <slide class="" id="slide-7" style="background:;">
   <hgroup>
-    <h2>Les solutions actuelles (cf. J2M2016)</h2>
+    <h2>Les solutions actuelles (cf. J2M 2016)</h2>
   </hgroup>
   <article data-timings="">
-    <p><img style="position: absolute; top: 240px; right: 10px; border: 0; width:400px;" src="assets/img/gps.png"></p>
+    <p><img style="position: absolute; top:110px; right: 10px; border: 0; width:400px;" src="assets/img/trimbleGeo7x.png"></p>
 
-<h3>Comparer la précision de plusieurs appareils</h3>
+<h3>Appareils centimétriques</h3>
 
 <ul>
-<li>Grand public</li>
-<li>Haut de gamme</li>
-<li>Haut de gamme + corrections temps réel</li>
+<li>Corrections avancées</li>
+<li>Positionnement centimétrique réel</li>
+</ul>
+
+<p><u>MAIS</u></p>
+
+<ul>
+<li>Bugs OS</li>
+<li>(Trop !) coûteux</li>
+<li>Signal correctif (VRS) payant</li>
+<li>Mises à jour payantes</li>
 </ul>
 
   </article>
@@ -199,25 +209,19 @@
 
 <slide class="" id="slide-8" style="background:;">
   <hgroup>
-    <h2>Mode opératoire</h2>
+    <h2>Une alternative low-cost</h2>
   </hgroup>
   <article data-timings="">
-    <p><img style="position: absolute; top: 300px; right: 10px; border: 0; width:400px;" src="assets/img/retour.png"></p>
+    <p><img style="position: absolute; top:20px; right: 40px; border: 0; width:94px;" src="assets/img/rtklib.jpeg">
+<img style="position: absolute; top:220px; right: 10px; border: 0; width:520px;" src="assets/img/Principe_RTK.png"></p>
 
-<h3>1/ Prise de coordonnées</h3>
-
-<ul>
-<li>3 zones à la topographie distincte (30 arbres par zone)</li>
-<li>Un référentiel : télémètre laser</li>
-<li>Chaque appareil enregistre les coordonnées</li>
-</ul>
-
-<h3>2/ Retour à l'arbre</h3>
+<h3>Antennes RTK Emlid</h3>
 
 <ul>
-<li>Suivant les coordonnées de références</li>
-<li>En un temps limité</li>
-<li>On évalue la distance à l&#39;arbre</li>
+<li>Basée sur librairie RTKLib</li>
+<li>Principe Real Time Kinematic (RTK)</li>
+<li>Calcul de différence sur phase porteuse </li>
+<li>==&gt; Position centimétrique</li>
 </ul>
 
   </article>
@@ -226,10 +230,17 @@
 
 <slide class="" id="slide-9" style="background:;">
   <hgroup>
-    <h2>Premiers Résultats</h2>
+    <h2>Système D ou clé en main</h2>
   </hgroup>
   <article data-timings="">
-    <p><img style="position: absolute; top: 140px; right: 10px; border: 0; width:950px;" src="assets/img/res.png"></p>
+    <h3>Antenne autonome "maison"</h3>
+
+<ul>
+<li>Fabriquée par Julien Ancelin (INRA)</li>
+<li>Basée sur Reach RTK Emlid</li>
+<li>Interfacée sur tablette ou smartphone </li>
+<li>Remplace la puce GPS native</li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -237,7 +248,29 @@
 
 <slide class="" id="slide-10" style="background:;">
   <hgroup>
-    <h2>Conclusions provisoires</h2>
+    <h2>Réseau Centipède</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img style="position: absolute; top:20px; right: 40px; border: 0; width:254px;" src="assets/img/centipede.jpeg">
+<img style="position: absolute; top:250px; right: 20px; border: 0; width:504px;" src="assets/img/reseau_centipede.png"></p>
+
+<h3>Réseau d'antennes ouvertes</h3>
+
+<ul>
+<li>Mis en oeuvre par J. Ancelin</li>
+<li>Réseau d&#39;antennes autonomes</li>
+<li>Signal corrigé &quot;centralisé&quot;</li>
+<li class='..'>Puis renvoyé en http</li>
+<li>projet d&#39;extension en Occitanie</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Conclusions</h2>
   </hgroup>
   <article data-timings="">
     <ul>
@@ -252,7 +285,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-11" style="background:;">
+<slide class="" id="slide-12" style="background:;">
   <article data-timings="">
     <p><img style="position: absolute; top: 200px; right: 250px; border: 0; width:650px;" src="assets/img/bubu.jpg"></p>
 
@@ -298,38 +331,44 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='Le système GPS'>
+        data-slide=6 title='Rappel : Le système GPS'>
          6
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Les solutions actuelles (cf. J2M2016)'>
+        data-slide=7 title='Les solutions actuelles (cf. J2M 2016)'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='Mode opératoire'>
+        data-slide=8 title='Une alternative low-cost'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='Premiers Résultats'>
+        data-slide=9 title='Système D ou clé en main'>
          9
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=10 title='Conclusions provisoires'>
+        data-slide=10 title='Réseau Centipède'>
          10
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=11 title='NA'>
+        data-slide=11 title='Conclusions'>
          11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='NA'>
+         12
       </a>
     </li>
   </ul>
