@@ -17,8 +17,7 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 
 --- 
 ## Présentation
-<img style="position: absolute; top: 150px; right: 80px; border: 0; width:500px;" src="assets/img/reachrs.png">
-
+<img style="position: absolute; top:80px; right: 80px; border: 0; width:400px;" src="assets/img/rover.jpg">
 - Contexte de Recherche
 - Zones d'études reculées
 - Rappel : Le système GPS
@@ -110,6 +109,7 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 
 --- 
 ## Système D ou clé en main
+<img style="position: absolute; top:20px; right: 40px; border: 0; width:350px;" src="assets/img/base.png">
 
 
 <h3>Antenne autonome "maison"</h3>
@@ -121,7 +121,7 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 
 --- 
 ## Système D ou clé en main
-
+<img style="position: absolute; top: 150px; right: 80px; border: 0; width:500px;" src="assets/img/reachrs.png">
 
 <h3>Antenne Reach RS+</h3>
  - Fabriquée par EMLID
@@ -133,10 +133,17 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 ## Quelques chiffres
 <img style="position: absolute; top:20px; right: 40px; border: 0; width:394px;" src="assets/img/porte-monnaie.jpg">
 
-<h3>Antenne Reach RS+</h3>
- - Fabriquée par EMLID
- - Embarque la puce Reach M+
- - Prête à utiliser
+<h3>GPS centimétrique</h3>
+ -  ~ 15000 €
+
+<h3>Signal corrigé</h3>
+ -  ~ 2000 € / an
+ 
+<h3>Reach M+</h3>
+ -  ~ 250 $
+
+<h3>Reach RS+</h3>
+ -  ~ 800 $
 
 --- 
 ## Réseau Centipède
