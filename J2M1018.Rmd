@@ -144,14 +144,6 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 ## Quelques chiffres
 <img style="position: absolute; top:20px; right: 40px; border: 0; width:394px;" src="assets/img/porte-monnaie.jpg">
 
-<<<<<<< HEAD
-<h3>Coût des solutions</h3>
- - GPS centimétrique : ~ 15000€
- - Abonnement VRS : ~ 2000€/an
- - 
- - Reach M+ : 245$
- - Reach RS+ : 799$
-=======
 <h3>GPS centimétrique</h3>
  -  ~ 15000 €
 
@@ -163,7 +155,7 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 
 <h3>Reach RS+</h3>
  -  ~ 800 $
->>>>>>> refs/remotes/origin/master
+
 
 --- 
 ## Réseau Centipède
