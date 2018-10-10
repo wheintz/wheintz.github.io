@@ -19,7 +19,6 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 ## Présentation
 <img style="position: absolute; top:80px; right: 80px; border: 0; width:400px;" src="assets/img/rover.jpg">
 - Contexte de Recherche
-- Zones d'études reculées
 - Rappel : Le système GPS
 - Solution actuelle 
 - RTK
@@ -110,12 +109,8 @@ ext_widgets : {rCharts: [libraries/nvd3]}
  - ==> Position centimétrique
 
 --- 
-<<<<<<< HEAD
 ## Alternative low-cost
-=======
-## Système D ou clé en main
 <img style="position: absolute; top:20px; right: 40px; border: 0; width:350px;" src="assets/img/base.png">
->>>>>>> refs/remotes/origin/master
 
 
 <h3>Antenne autonome "maison"</h3>
@@ -126,13 +121,9 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 
 
 --- 
-<<<<<<< HEAD
 ## Alternative low-cost
-
-=======
-## Système D ou clé en main
 <img style="position: absolute; top: 150px; right: 80px; border: 0; width:500px;" src="assets/img/reachrs.png">
->>>>>>> refs/remotes/origin/master
+
 
 <h3>Antenne Reach RS+</h3>
  - Fabriquée par EMLID
