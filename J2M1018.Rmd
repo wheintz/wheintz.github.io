@@ -22,10 +22,12 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 - Contexte de Recherche
 - Zones d'études reculées
 - Rappel : Le système GPS
-- Un GPS centimétrique 
-- Une solution alternative !
-- Premiers résultats
-- Le projet Centipède
+- Solution actuelle 
+- RTK
+- Alternative low-cost
+- Quelques chiffres
+- Le réseau Centipède
+- Perspectives
 
 
 --- 
@@ -98,29 +100,29 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 
 
 --- 
-## Une alternative low-cost
+## RTK
 
 <img style="position: absolute; top:20px; right: 40px; border: 0; width:94px;" src="assets/img/rtklib.jpeg">
 <img style="position: absolute; top:220px; right: 10px; border: 0; width:520px;" src="assets/img/Principe_RTK.png">
 <h3>Puce RTK</h3>
- - Basée sur librairie RTKLib
- - Principe Real Time Kinematic (RTK)
+ - Librairie RTKLib
+ - Principe Real Time Kinematic
  - Calcul de différence sur phase porteuse 
  - ==> Position centimétrique
 
 --- 
-## Système D ou clé en main
+## Alternative low-cost
 
 
 <h3>Antenne autonome "maison"</h3>
  - Fabriquée par Julien Ancelin (INRA)
  - Basée sur puce Reach RTK Emlid
  - Interfacée sur tablette ou smartphone 
- - Envoie signal corrigé par radio
+ - Envoi du signal corrigé par radio
 
 
 --- 
-## Système D ou clé en main
+## Alternative low-cost
 
 
 <h3>Antenne Reach RS+</h3>
@@ -133,10 +135,12 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 ## Quelques chiffres
 <img style="position: absolute; top:20px; right: 40px; border: 0; width:394px;" src="assets/img/porte-monnaie.jpg">
 
-<h3>Antenne Reach RS+</h3>
- - Fabriquée par EMLID
- - Embarque la puce Reach M+
- - Prête à utiliser
+<h3>Coût des solutions</h3>
+ - GPS centimétrique : ~ 15000€
+ - Abonnement VRS : ~ 2000€/an
+ - 
+ - Reach M+ : 245$
+ - Reach RS+ : 799$
 
 --- 
 ## Réseau Centipède
@@ -151,16 +155,14 @@ ext_widgets : {rCharts: [libraries/nvd3]}
  
 
 --- 
-## Conclusions
+## Perspectives
 
- - Différences de précision significatives
- - Importance du premier relevé !
- - Bien définir les conditions d'exploitation de l'appareil
- - Bien choisir sa saison d'expérimentation
- - D'autres facteurs à tester : éphémérides, marque du GPS ...
+ - Faire un comparatif approfondi
+ - Tester l'autonomie et la durabilité
+ - Enrichir le réseau Centipède
 
 --- 
-<img style="position: absolute; top: 200px; right: 250px; border: 0; width:650px;" src="assets/img/bubu.jpg">
+<img style="position: absolute; top: 200px; right: 250px; border: 0; width:450px;" src="assets/img/gps-wrong.jpg">
 ## Merci pour votre attention
 
 
