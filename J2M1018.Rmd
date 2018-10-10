@@ -165,6 +165,7 @@ ext_widgets : {rCharts: [libraries/nvd3]}
 
  - Faire un comparatif approfondi
  - Tester l'autonomie et la durabilité
+ - Tester le module drone
  - Enrichir le réseau Centipède
 
 --- 
