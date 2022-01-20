@@ -2,4 +2,4 @@
 Wilfried Heintz online pages
 
 ---
-wilfried.heintz AT toulouse.inra.fr
+wilfried.heintz AT inrae.fr
